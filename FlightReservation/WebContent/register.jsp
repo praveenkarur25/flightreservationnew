@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Register Page</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -153,7 +153,7 @@ color:#FFC312;
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item">
-        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/Aboutus.jsp">About us</a>
       </li>
 	   
     <li class="nav-item dropdown">
@@ -212,7 +212,7 @@ color:#FFC312;
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" name="password"class="form-control" placeholder="password" required>
+						<input type="password" name="password"class="form-control" placeholder="password" minlength="8" maxlength="16" required>
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -250,8 +250,8 @@ function validation()
 
 	pass=document.register.password.value;
 	
-	var regularExpression  = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-	if(!regularExpression.test(pass) &&(pass.length<8&&pass.length)) {
+	var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+	if(!regularExpression.test(pass)) {
         alert("password should contain atleast one number and one special character and minimum 8 characters");
         return false;
         
