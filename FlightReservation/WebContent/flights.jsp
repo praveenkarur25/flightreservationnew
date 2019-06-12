@@ -181,18 +181,8 @@ color:#FFC312;
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item">
-        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" href="#">Logout</a>
       </li>
-	   
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-       Helpline
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" >080-655412626</a>
-        <a class="dropdown-item" >abcflights@helpline.com</a>
-      </div>
-    </li>
     </ul>
   </div>
 	</div>
