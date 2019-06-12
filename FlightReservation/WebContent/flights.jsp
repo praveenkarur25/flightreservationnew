@@ -125,7 +125,6 @@ color: white;
 margin-left: 6px;
 color:#FFC312;
 }
-
 .sidenav {
   height: 100%;
   width: 200px;
@@ -148,7 +147,14 @@ color:#FFC312;
 .sidenav a:hover {
   color: #ffc312;
 }
-
+.sidenav a:active {
+	background-color:#ffc312;
+	color: black;
+}
+.sidenav a:focus {
+	background-color:#ffc312;
+	color: black;
+}
 .table{
 	background-color: rgba(0,0,0,0.5) !important;
 	color:white !important;
@@ -162,8 +168,6 @@ color:#FFC312;
 .btn:focus{
 	background:black;
 }
-
-
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -193,20 +197,15 @@ color:#FFC312;
 <div class="container">
 	<div class="text-intro">
 	
-		<p>&#x00A9 2019-All rights reserved Air-India services</p>
 	</div>
 </div>
 </section>
-
-
 	<div class="sidenav tab mt-5 pt-5">
 	    <a href="#" class="pt-4">FLIGHTS</a>
 	    <a href="#" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
-
-
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
