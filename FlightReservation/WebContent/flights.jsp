@@ -78,11 +78,11 @@ height: 100%;
 font-family: 'Numans', sans-serif;
 }
 .container{
-height: 30%;
+height: 20%;
 align-content: center;
 }
 .card{
-height: 360px;
+height: 470px;
 margin-left:200px; 
 margin-top: 0px;
 margin-bottom: auto;
@@ -161,6 +161,7 @@ color:#FFC312;
 }
 .btn:hover{
 	background-color:#ffc312;
+	color:black;
 }
 .btn:active{
 	background:black;
@@ -201,7 +202,7 @@ color:#FFC312;
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="#" class="pt-4">FLIGHTS</a>
+	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4 active">FLIGHTS</a>
 	    <a href="#" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
@@ -220,27 +221,41 @@ color:#FFC312;
 					<table class="table table-hover">
 					    <thead>
 					      <tr>
-					        <th>Flights</th>
+					        <th class="col-sm-3">Flights</th>
 					        <th>Time</th>
+					        <th>From</th>
+					        <th>To</th>
+					        <th class="col-sm-4">Seats booked</th>
+					        <th></th>
+					        <th></th>
 					      </tr>
 					    </thead>
 					    <tbody>
 					      <tr>
 					        <td>cbe-bgr</td>
 					        <td>10:00 am</td>
-					        <td><a class="btn btn-primary btn-sm" href="#">Edit</a></td>
+					        <td>coimbatore</td>
+					        <td>bangalore</td>
+					        <td>50</td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer_n_test.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					      <tr>
 					        <td>mas-cstm</td>
 					        <td>12:00 pm</td>
-					        <td><a class="btn btn-primary btn-sm" href="#">Edit</a></td>
+					        <td>chennai</td>
+					        <td>mumbai</td>
+					        <td>100</td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer_n_test.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
 					      <tr>
 					        <td>mas-cstm</td>
 					        <td>12:00 pm</td>
-					        <td><a class="btn btn-primary btn-sm" href="#">Edit</a></td>
+					        <td>chennai</td>
+					        <td>mumbai</td>
+					        <td>70</td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer_n_test.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
 					    </tbody>
@@ -249,7 +264,9 @@ color:#FFC312;
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Have a nice day !!
+					<form action="">
+						<input class="btn btn-primary btn-sm" type="submit" value="ADD FLIGHTS">
+					</form>
 				</div>
 			</div>
 		</div>
