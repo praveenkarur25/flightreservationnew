@@ -148,6 +148,14 @@ color:#FFC312;
 .sidenav a:hover {
   color: #ffc312;
 }
+.sidenav a:active {
+	background-color:#ffc312;
+	color: black;
+}
+.sidenav a:focus {
+	background-color:#ffc312;
+	color: black;
+}
 
 .table{
 	background-color: rgba(0,0,0,0.5) !important;
@@ -207,7 +215,7 @@ form{
 
 
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="#" class="pt-4">FLIGHTS</a>
+	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4">FLIGHTS</a>
 	    <a href="#" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
@@ -226,7 +234,7 @@ form{
 			<div class="card-body">
 				<form action="register.jsp">
 					<div class="form-group">
-						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="John">
+						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="Flight name">
 				    </div>
 				    <br>
 				    <div class="form-group">
@@ -239,8 +247,8 @@ form{
 				    </div>
 				    
     				<div class="form-group">
-				      <label for="fare">Fare</label>
-				      <input type="number" style="width:200px" id="fare" name="fare" value="Rs 1200">
+				      <label for="fare">Fare &#8377</label>
+				      <input type="number" style="width:150px" id="fare" name="fare" value="Rs 1200">
     				</div>
     				<div class="row justify-content-center">
     					<button type="submit" class="btn btn-primary">Submit</button>
