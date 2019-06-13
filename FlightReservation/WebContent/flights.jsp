@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Flight Details</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -162,13 +162,22 @@ color:#FFC312;
 .btn:hover{
 	background-color:#ffc312;
 	color:black;
+	border:none !important;
 }
 .btn:active{
 	background:black;
+	border:none !important;
 }
 .btn:focus{
 	background:black;
+	border:none !important;
 }
+
+.highlight{
+	background-color:#ffc312;
+	color:black !important;
+}
+
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -202,8 +211,8 @@ color:#FFC312;
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4 active">FLIGHTS</a>
-	    <a href="#" class="pt-4">ROUTE</a>
+	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4 highlight">FLIGHTS</a>
+	    <a href="http://localhost:8037/My_website/route.jsp" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
@@ -237,7 +246,7 @@ color:#FFC312;
 					        <td>coimbatore</td>
 					        <td>bangalore</td>
 					        <td>50</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer_n_test.jsp">Edit</a></td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					      <tr>
@@ -246,7 +255,7 @@ color:#FFC312;
 					        <td>chennai</td>
 					        <td>mumbai</td>
 					        <td>100</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer_n_test.jsp">Edit</a></td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
 					      <tr>
@@ -255,7 +264,7 @@ color:#FFC312;
 					        <td>chennai</td>
 					        <td>mumbai</td>
 					        <td>70</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer_n_test.jsp">Edit</a></td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/refer.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
 					    </tbody>
