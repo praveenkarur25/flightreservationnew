@@ -239,27 +239,36 @@ form{
 				    <br>
 				    <div class="form-group">
 				    	From : <input type="text" style="width:150px" name="from" placeholder="From Airport">
-				    	Via : <input type="text" style="width:150px" name="from" value="Inbetween" readonly>
+				    	Via : <input type="text" style="width:150px" name="from" placeholder="Inbetween">
 				    	To : <input type="text" style="width:150px" name="from" placeholder="To Airport">
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	Arrival time : <input type="text" style="width:150px" name="from" placeholder="00:00:00">
-				    	Departure time : <input type="text" style="width:150px" name="from" placeholder="00:00:00">
+				    	Arrival time : <input type="text" style="width:150px" name="from" placeholder="hh:mm">
+				    	Departure time : <input type="text" style="width:150px" name="from" placeholder="hh:mm">
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	Class : <input type="text" style="width:150px" name="class" value="First class" readonly>
+				    	Class : <input type="text" style="width:150px" name="class" value="Economy" readonly>
 				    </div>
 				    <br>
     				<div class="form-group">
 				      <label for="fare">Fare &#8377</label>
 				      <input type="number" style="width:150px" id="fare" name="fare" placeholder="500">
     				</div>
-    				<div class="row justify-content-center">
+				
+    				<div class="d-flex justify-content-center">
+    				<div>
     					<button type="submit" class="btn btn-primary">Submit</button>
 					</div>
 				</form>
+				
+				<form>
+					<div">
+    					<button type="submit" class="btn btn-primary">cancel</button>
+					</div>
+				</form>
+				</div>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
