@@ -224,7 +224,7 @@ form{
 				
 			</div>
 			<div class="card-body">
-				<form action="addflight.jsp">
+				<form action="addflight" method="post">
 					<div class="form-group">
 						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" placeholder="Flight name" required>
 				    </div>

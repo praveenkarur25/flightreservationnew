@@ -16,7 +16,7 @@ import com.frs.xyz.service.Flight_Details;
 @WebServlet("/addflight")
 public class AddFlight extends HttpServlet {
 
-	protected void doPostt(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String flight_name = request.getParameter("flightName");
@@ -30,6 +30,7 @@ public class AddFlight extends HttpServlet {
 		int economy_fare = Integer.parseInt(request.getParameter("fare"));
 		int business_fare = (economy_fare * 25) / 100 + economy_fare;
 		int firstclass_fare = (business_fare * 40) / 100 + business_fare;
+		System.out.println(dep_time);
 
 		XYZ_Flight_Bean addFlight = new XYZ_Flight_Bean();
 		addFlight.setFlight_Name(flight_name);
@@ -42,8 +43,7 @@ public class AddFlight extends HttpServlet {
 		addFlight.setEconomy_fare(economy_fare);
 		addFlight.setFirstclass_fare(firstclass_fare);
 
-		Flight_Details flightDetails = new Flight_Details();
-		String status = flightDetails.addFlight(addFlight);
+		String status = Flight_Details.addFlight(addFlight);
 
 		if (status.equals("success")) {
 			PrintWriter out = response.getWriter();
