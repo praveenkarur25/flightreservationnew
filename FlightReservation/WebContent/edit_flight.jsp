@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Flight</title>
+	<title>edit Flight</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -125,7 +125,6 @@ color: white;
 margin-left: 6px;
 color:#FFC312;
 }
-
 .sidenav {
   height: 100%;
   width: 200px;
@@ -156,29 +155,34 @@ color:#FFC312;
 	background-color:#ffc312;
 	color: black;
 }
-
 .table{
 	background-color: rgba(0,0,0,0.5) !important;
 	color:white !important;
 }
 .btn:hover{
 	background-color:#ffc312;
+	color:black;
+	border:none !important;
 }
 .btn:active{
 	background:black;
+	border:none !important;
 }
 .btn:focus{
 	background:black;
+	border:none !important;
 }
 
+.highlight{
+	background-color:#ffc312;
+	color:black !important;
+}
 label{
 	color:white;
 }
 form{
 	color:white;
 }
-
-
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -212,16 +216,12 @@ form{
 	</div>
 </div>
 </section>
-
-
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4">FLIGHTS</a>
-	    <a href="#" class="pt-4">ROUTE</a>
+	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4 highlight">FLIGHTS</a>
+	    <a href="http://localhost:8037/My_website/route.jsp" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
-
-
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
@@ -250,10 +250,21 @@ form{
 				      <label for="fare">Fare &#8377</label>
 				      <input type="number" style="width:150px" id="fare" name="fare" value="Rs 1200">
     				</div>
-    				<div class="row justify-content-center">
-    					<button type="submit" class="btn btn-primary">Submit</button>
+    				
+    				<div class="d-flex justify-content-center">
+    				<div>
+    					<button type="submit" class="btn btn-primary">Save</button>
 					</div>
 				</form>
+				
+				<form>
+					<div">
+    					<button type="submit" class="btn btn-primary ml-3">cancel</button>
+					</div>
+				</form>
+				</div>
+				
+				
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
