@@ -177,7 +177,10 @@ label{
 form{
 	color:white;
 }
-
+.highlight{
+	background-color:#ffc312;
+	color:black !important;
+}
 
 </style>
 <body>
@@ -215,7 +218,7 @@ form{
 
 
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4">FLIGHTS</a>
+	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4 highlight">FLIGHTS</a>
 	    <a href="#" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
