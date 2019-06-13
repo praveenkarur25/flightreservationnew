@@ -153,13 +153,23 @@ color:#FFC312;
 }
 .btn:hover{
 	background-color:#ffc312;
+	color:black;
+	border:none !important;
 }
 .btn:active{
 	background:black;
+	border:none !important;
 }
 .btn:focus{
 	background:black;
+	border:none !important;
 }
+
+.highlight{
+	background-color:#ffc312;
+	color:black !important;
+}
+
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -196,7 +206,7 @@ color:#FFC312;
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="#" class="pt-4">FLIGHTS</a>
+	    <a href="#" class="pt-4 highlights">FLIGHTS</a>
 	    <a href="#" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
@@ -244,7 +254,7 @@ color:#FFC312;
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Have a nice day !!
+					<input class="btn btn-primary btn-sm" type="submit" value="ADD FLIGHTS">
 				</div>
 			</div>
 		</div>
