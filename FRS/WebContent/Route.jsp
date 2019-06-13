@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flight Details</title>
+	<title>route</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -209,8 +209,8 @@ color:#FFC312;
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4 highlight">FLIGHTS</a>
-	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4">ROUTE</a>
+	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4">FLIGHTS</a>
+	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4 highlight">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
@@ -220,17 +220,18 @@ color:#FFC312;
 		
 			<div class="card-header">
 				
-				<h3>Flight Details</h3>
+				<h3>Route Details</h3>
 				
 			</div>
 			<div class="card-body">
-				<form name="login" action="edit">
+				<form name="login" action="register.jsp">
 					<table class="table table-hover">
 					    <thead>
 					      <tr>
 					        <th class="col-sm-3">Flights</th>
 					        <th>Time</th>
 					        <th>From</th>
+					        <th>Via</th>
 					        <th>To</th>
 					        <th class="col-sm-4">Seats booked</th>
 					        <th></th>
@@ -242,27 +243,30 @@ color:#FFC312;
 					        <td>cbe-bgr</td>
 					        <td>10:00 am</td>
 					        <td>coimbatore</td>
+					        <td>Chennai</td>
 					        <td>bangalore</td>
 					        <td>50</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flights.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					      <tr>
 					        <td>mas-cstm</td>
 					        <td>12:00 pm</td>
 					        <td>chennai</td>
+					        <td> </td>
 					        <td>mumbai</td>
 					        <td>100</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flights.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
 					      <tr>
 					        <td>mas-cstm</td>
 					        <td>12:00 pm</td>
 					        <td>chennai</td>
+					        <td> </td>
 					        <td>mumbai</td>
 					        <td>70</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
+					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flights.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
 					    </tbody>
@@ -271,11 +275,12 @@ color:#FFC312;
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					<form action="AddFlights.jsp">
-						<input class="btn btn-primary btn-sm" type="submit" value="ADD FLIGHTS">
+					<form action="">
+						<input class="btn btn-primary btn-sm" type="submit" value="ADD ROUTE">
 					</form>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>

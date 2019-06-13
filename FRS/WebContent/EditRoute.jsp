@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flight Details</title>
+	<title>Edit_route</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -78,11 +78,11 @@ height: 100%;
 font-family: 'Numans', sans-serif;
 }
 .container{
-height: 20%;
+height: 30%;
 align-content: center;
 }
 .card{
-height: 470px;
+height: 360px;
 margin-left:200px; 
 margin-top: 0px;
 margin-bottom: auto;
@@ -161,7 +161,6 @@ color:#FFC312;
 }
 .btn:hover{
 	background-color:#ffc312;
-	color:black;
 	border:none !important;
 }
 .btn:active{
@@ -172,6 +171,12 @@ color:#FFC312;
 	background:black;
 	border:none !important;
 }
+label{
+	color:white;
+}
+form{
+	color:white;
+}
 .highlight{
 	background-color:#ffc312;
 	color:black !important;
@@ -181,7 +186,7 @@ color:#FFC312;
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 	<div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="#"><span>ABC</span> FLIGHT SERVICES</a>
+  <a class="navbar-brand" href="#"><span>XYZ</span> FLIGHT SERVICES</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -205,12 +210,13 @@ color:#FFC312;
 <div class="container">
 	<div class="text-intro">
 	
+		<p>&#x00A9 2019-All rights reserved Air-India services</p>
 	</div>
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4 highlight">FLIGHTS</a>
-	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4">ROUTE</a>
+	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4">FLIGHTS</a>
+	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4 highlight">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
@@ -220,60 +226,51 @@ color:#FFC312;
 		
 			<div class="card-header">
 				
-				<h3>Flight Details</h3>
+				<h3>Route Details</h3>
 				
 			</div>
 			<div class="card-body">
-				<form name="login" action="edit">
-					<table class="table table-hover">
-					    <thead>
-					      <tr>
-					        <th class="col-sm-3">Flights</th>
-					        <th>Time</th>
-					        <th>From</th>
-					        <th>To</th>
-					        <th class="col-sm-4">Seats booked</th>
-					        <th></th>
-					        <th></th>
-					      </tr>
-					    </thead>
-					    <tbody>
-					      <tr>
-					        <td>cbe-bgr</td>
-					        <td>10:00 am</td>
-					        <td>coimbatore</td>
-					        <td>bangalore</td>
-					        <td>50</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
-					      </tr>
-					      <tr>
-					        <td>mas-cstm</td>
-					        <td>12:00 pm</td>
-					        <td>chennai</td>
-					        <td>mumbai</td>
-					        <td>100</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
-					      </tr>
-					      <tr>
-					        <td>mas-cstm</td>
-					        <td>12:00 pm</td>
-					        <td>chennai</td>
-					        <td>mumbai</td>
-					        <td>70</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
-					      </tr>
-					    </tbody>
-					</table>
+				<form action="register.jsp">
+					<div class="form-group">
+						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="" readonly>
+				    </div>
+				    <br>
+				    <div class="form-group">
+				    	From : <input type="text" style="width:150px" name="from" placeholder="From Airport">
+				    	Via : <input type="text" style="width:150px" name="from" placeholder="Inbetween">
+				    	To : <input type="text" style="width:150px" name="from" placeholder="To Airport">
+				    </div>
+				    <br>
+				    <div class="form-group">
+				    	Arrival time : <input type="text" style="width:150px" name="from" value="" readonly>
+				    	Departure time : <input type="text" style="width:150px" name="from" value="" readonly>
+				    </div>
+				    <br>
+				    <div class="form-group">
+				    	Class : <input type="text" style="width:150px" name="class" value="Economy" readonly>
+				    </div>
+				    <br>
+    				<div class="form-group">
+				      <label for="fare">Fare &#8377</label>
+				      <input type="number" style="width:150px" id="fare" name="fare" value="" readonly>
+    				</div>
+				
+    				<div class="d-flex justify-content-center">
+    				<div>
+    					<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
 				</form>
+				
+				<form>
+					<div">
+    					<button type="submit" class="btn btn-primary ml-3">cancel</button>
+					</div>
+				</form>
+				</div>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					<form action="AddFlights.jsp">
-						<input class="btn btn-primary btn-sm" type="submit" value="ADD FLIGHTS">
-					</form>
+					
 				</div>
 			</div>
 		</div>

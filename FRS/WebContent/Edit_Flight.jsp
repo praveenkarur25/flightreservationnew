@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Flight</title>
+	<title>edit Flight</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -147,18 +147,34 @@ color:#FFC312;
 .sidenav a:hover {
   color: #ffc312;
 }
+.sidenav a:active {
+	background-color:#ffc312;
+	color: black;
+}
+.sidenav a:focus {
+	background-color:#ffc312;
+	color: black;
+}
 .table{
 	background-color: rgba(0,0,0,0.5) !important;
 	color:white !important;
 }
 .btn:hover{
 	background-color:#ffc312;
+	color:black;
+	border:none !important;
 }
 .btn:active{
 	background:black;
+	border:none !important;
 }
 .btn:focus{
 	background:black;
+	border:none !important;
+}
+.highlight{
+	background-color:#ffc312;
+	color:black !important;
 }
 label{
 	color:white;
@@ -182,7 +198,7 @@ form{
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="http://localhost:9080/FRS/Login.jsp" id="logout" onClick="return confirmed()">Logout</a>
       </li>
     </ul>
@@ -193,12 +209,12 @@ form{
 
 <section id="about">
 <div class="container">
-	
+
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4">FLIGHTS</a>
-	    <a href="#" class="pt-4">ROUTE</a>
+	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4 highlight">FLIGHTS</a>
+	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
@@ -212,9 +228,9 @@ form{
 				
 			</div>
 			<div class="card-body">
-				<form action="edit" method="post">
+				<form action="register.jsp">
 					<div class="form-group">
-						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="John">
+						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="Flight name" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
@@ -227,19 +243,24 @@ form{
 				    </div>
 				    
     				<div class="form-group">
-				      <label for="fare">Fare</label>
-				      <input type="number" style="width:200px" id="fare" name="fare" value="1200" minlength="0" maxlength="10000" >
+				      <label for="fare">Fare &#8377</label>
+				      <input type="number" style="width:150px" id="fare" name="fare" value="Rs 1200" required>
     				</div>
-    				<div class="row justify-content-center" >
+    				
+    				<div class="d-flex justify-content-center">
+    				<div>
     					<button type="submit" class="btn btn-primary">Save</button>
 					</div>
-					
 				</form>
-				<form action="Flights.jsp">
-				<div >
-    					<button type="submit" class="btn btn-primary">cancel</button>
+				
+				<form>
+					<div">
+    					<button type="submit" class="btn btn-primary ml-3">cancel</button>
 					</div>
 				</form>
+				</div>
+				
+				
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
@@ -264,13 +285,13 @@ $(document).on("scroll", function(){
 </script>
 <script>
 function confirmed()
-{
-	if(confirm('Are you sure want to logout?')) {
-        return true;
-    }
+		{
+			if(confirm('Are you sure want to logout?')) {
+		        return true;
+		       
+		    }
 
-    return false;
-	}
-
-</script>
+		    return false;
+			}
+			</script>
 </html>

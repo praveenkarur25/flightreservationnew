@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Flight Details</title>
+	<title>Add Flight</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
@@ -78,11 +78,11 @@ height: 100%;
 font-family: 'Numans', sans-serif;
 }
 .container{
-height: 20%;
+height: 30%;
 align-content: center;
 }
 .card{
-height: 470px;
+height: 360px;
 margin-left:200px; 
 margin-top: 0px;
 margin-bottom: auto;
@@ -161,16 +161,18 @@ color:#FFC312;
 }
 .btn:hover{
 	background-color:#ffc312;
-	color:black;
-	border:none !important;
 }
 .btn:active{
 	background:black;
-	border:none !important;
 }
 .btn:focus{
 	background:black;
-	border:none !important;
+}
+label{
+	color:white;
+}
+form{
+	color:white;
 }
 .highlight{
 	background-color:#ffc312;
@@ -192,7 +194,7 @@ color:#FFC312;
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="http://localhost:9080/FRS/Login.jsp" id="logout" onClick="return confirmed()">Logout</a>
       </li>
     </ul>
@@ -203,14 +205,12 @@ color:#FFC312;
 
 <section id="about">
 <div class="container">
-	<div class="text-intro">
 	
-	</div>
 </div>
 </section>
 	<div class="sidenav tab mt-5 pt-5">
 	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4 highlight">FLIGHTS</a>
-	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4">ROUTE</a>
+	    <a href="#" class="pt-4">ROUTE</a>
 	    <a href="#" class="pt-4">SCHEDULE</a>
 	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
 	</div>
@@ -224,56 +224,47 @@ color:#FFC312;
 				
 			</div>
 			<div class="card-body">
-				<form name="login" action="edit">
-					<table class="table table-hover">
-					    <thead>
-					      <tr>
-					        <th class="col-sm-3">Flights</th>
-					        <th>Time</th>
-					        <th>From</th>
-					        <th>To</th>
-					        <th class="col-sm-4">Seats booked</th>
-					        <th></th>
-					        <th></th>
-					      </tr>
-					    </thead>
-					    <tbody>
-					      <tr>
-					        <td>cbe-bgr</td>
-					        <td>10:00 am</td>
-					        <td>coimbatore</td>
-					        <td>bangalore</td>
-					        <td>50</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
-					      </tr>
-					      <tr>
-					        <td>mas-cstm</td>
-					        <td>12:00 pm</td>
-					        <td>chennai</td>
-					        <td>mumbai</td>
-					        <td>100</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
-					      </tr>
-					      <tr>
-					        <td>mas-cstm</td>
-					        <td>12:00 pm</td>
-					        <td>chennai</td>
-					        <td>mumbai</td>
-					        <td>70</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:9080/FRS/Edit_Flight.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
-					      </tr>
-					    </tbody>
-					</table>
+				<form action="addflight.jsp">
+					<div class="form-group">
+						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" placeholder="Flight name" required>
+				    </div>
+				    <br>
+				    <div class="form-group">
+				    	From : <input type="text" style="width:150px" name="from" placeholder="From Airport" required>
+				    	Via : <input type="text" style="width:150px" name="via" placeholder="Inbetween" >
+				    	To : <input type="text" style="width:150px" name="to" placeholder="To Airport" required>
+				    </div>
+				    <br>
+				    <div class="form-group">
+				    	Arrival time : <input type="text" style="width:150px" name="arrTime" placeholder="hh:mm" required>
+				    	Departure time : <input type="text" style="width:150px" name="depTime" placeholder="hh:mm" required>
+				    </div>
+				    <br>
+				    <div class="form-group">
+				    	Class : <input type="text" style="width:150px" name="class" value="Economy" readonly>
+				    </div>
+				    <br>
+    				<div class="form-group">
+				      <label for="fare">Fare &#8377</label>
+				      <input type="number" style="width:150px" id="fare" name="fare" placeholder="500" required>
+    				</div>
+				
+    				<div class="d-flex justify-content-center">
+    				<div>
+    					<button type="submit" class="btn btn-primary">Add</button>
+					</div>
 				</form>
+				
+				<form action="Flights.jsp">
+					<div">
+    					<button type="submit" class="btn btn-primary ml-3">cancel</button>
+					</div>
+				</form>
+				</div>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					<form action="AddFlights.jsp">
-						<input class="btn btn-primary btn-sm" type="submit" value="ADD FLIGHTS">
-					</form>
+					
 				</div>
 			</div>
 		</div>
