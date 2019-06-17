@@ -212,7 +212,7 @@ color:#FFC312;
 	    <a href="http://localhost:8037/admin/NewFile1.jsp" class="pt-4">FLIGHTS</a>
 	    <a href="http://localhost:8037/My_website/route.jsp" class="pt-4">ROUTE</a>
 	    <a href="http://localhost:8031/frontend/schedule_details.jsp" class="pt-4 highlight">SCHEDULE</a>
-	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
+	    <a href="http://localhost:8031/frontend/passenger_details.jsp" class="pt-4">PASSENGER DETAILS</a>
 	</div>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
@@ -233,7 +233,7 @@ color:#FFC312;
 					        <th>To</th>
 					        <th>Arrival time</th>
 					        <th>Departure time</th>
-					        <th class="col-sm-4">Seats booked</th>
+					        <th>Seats booked</th>
 					        <th></th>
 					        <th></th>
 					      </tr>
