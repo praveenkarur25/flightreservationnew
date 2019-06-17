@@ -171,7 +171,11 @@ color:#FFC312;
 	border:none !important;
 }
 .btn:focus{
-	background:black;
+	background:green;
+	border:none !important;
+}
+.btn:disabled{
+	background:grey;
 	border:none !important;
 }
 .inpStyle{
@@ -223,8 +227,8 @@ color:#FFC312;
 							<div class="input-group form-group  d-flex justify-content-center seatClass">
 								Economy Class
 								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1A" value="1A" onClick="return validation(this);" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1B" value="1B" onClick="return validatio(this);" readonly>
+									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1A" value="1A" onClick="validation(this);" readonly>
+									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1A" value="1B" onClick="validatio(this);" readonly>
 									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1C" value="1C" readonly>
 									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="1D" value="1D" readonly>
 									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1E" value="1E" readonly>
@@ -260,7 +264,7 @@ color:#FFC312;
 									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5C" value="5C" readonly>
 									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="5D" value="5D" readonly>
 									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5E" value="5E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5F" value="5F" readonly>
+									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5F" value="5F" disabled readonly>
 								</div>
 								First Class
 								<div class="btn-group">
@@ -349,7 +353,7 @@ color:#FFC312;
 						</form>
 						
 					</div>
-					<p class="text-white"> Message is: <span id = "display_message"></span> </p>
+					<p class="text-white"> Seats: <span id = "display_message"></span> </p>
 					
 				</div>
 			</div>
@@ -395,7 +399,7 @@ color:#FFC312;
 							        <td><label for="name"></label>
 	    								<input type="text" id="name" required></td>
 							        <td><label for="age"></label>
-	    								<input type="number" id="age" style="width:70px;" min="1" max="5" required></td>
+	    								<input type="number" id="age" style="width:70px;" min="6" max="65" required></td>
 							        <td><label class="radio-inline"><input type="radio" name="radio1" checked>Male</label>
 									<label class="radio-inline"><input type="radio" name="radio1">Female</label>
 									<label class="radio-inline"><input type="radio" name="radio1">Other</label></td>
@@ -418,7 +422,7 @@ color:#FFC312;
 							        <td><label for="name"></label>
 	    								<input type="text" id="name"></td>
 							        <td><label for="age"></label>
-	    								<input type="number" id="age" style="width:70px;" min="5" max="65"></td>
+	    								<input type="number" id="age" style="width:70px;" min="1" max="5"></td>
 							        <td><label class="radio-inline"><input type="radio" name="radio2" checked>Male</label>
 									<label class="radio-inline"><input type="radio" name="radio2">Female</label>
 									<label class="radio-inline"><input type="radio" name="radio2">Other</label></td>
@@ -429,7 +433,7 @@ color:#FFC312;
 							<div class="row">
 								<div class="col1" style="width:35%;">
 									<label for="doorno">Door no/Flat no:</label>
-	    							<input type="text" id="doorno" style="width:50px;" required>
+	    							<input type="text" id="doorno" style="width:60px;" required>
 								</div>
 								<div class="col2" style="width:65%;">
 									<label for="streetname">Streetname:</label>
@@ -443,22 +447,27 @@ color:#FFC312;
 								<div class="row">
 								<div class="col1"style="width:45%;">
 									<label for="city">City/Town:</label>
-	    							<input type="text" id="city" style="width:200px;" required>
+	    							<input type="text" id="city" style="width:230px;" required>
 								</div>
 								<div class="col2"style="width:55%;">
 									<label for="state">State:</label>
-	    							<input type="text" id="state" style="width:200px;" required>
+	    							<input type="text" id="state" style="width:230px;" required>
 								</div>
 								</div><br>
-								
+								<div class="row">
+								<label for="pincode">Pincode:</label>
+	    							<input type="text" id="pincode"style="width:150px;"required>
+								</div><br>
+								<div class="text-center">
+									<input class="btn btn-primary" style="align:center;" type="submit" value="submit">
+								</div>
 						</form>
 					</div>
 				</div>	
 			</div>
 		</div>
 	</div>
-	
-</div>
+	</div>
 
 </body>
 <script>
@@ -476,17 +485,18 @@ $(document).on("scroll", function(){
 <script>
 function validation(form)
 {
-	var message = document.getElementById("1A").value;
-	document.getElementById("display_message").innerHTML="1A";
-	return false;
+	if(document.getElementById("1A").active == true)
+		document.getElementById("1A").active = false;
+	else
+		document.getElementById("Button").active = true;
 }
 </script>
 <script>
-function validatio(form)
-{
-	var message = document.getElementById("1B").value;
-	document.getElementById("display_message").innerHTML="1B";
-	return false;
+function toggleActiveState() {
+    this.classList.toggle('active');
 }
-</script>
+var btns = document.querySelectorAll('.btn btn-primary btn-sm inpStyle');
+[].forEach.call(btns, function() {
+  btn.addEventListener('click', toggleActiveState, false);
+});
 </html>
