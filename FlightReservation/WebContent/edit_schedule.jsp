@@ -253,7 +253,7 @@ form{
 				    <br>
     				<div class="form-group">
 				      <label for="Available Days">Available Days&emsp;:</label>
-				      <input type="checkbox" name="vehicle" value="Bike">Mon
+				      <input type="checkbox" name="vehicle" value="Bike" checked>Mon
 				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Tue
 				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Wed
 				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Thu
