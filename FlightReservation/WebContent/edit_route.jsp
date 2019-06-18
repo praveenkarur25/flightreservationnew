@@ -171,7 +171,6 @@ color:#FFC312;
 	background:black;
 	border:none !important;
 }
-
 label{
 	color:white;
 }
@@ -182,8 +181,6 @@ form{
 	background-color:#ffc312;
 	color:black !important;
 }
-
-
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -235,27 +232,24 @@ form{
 			<div class="card-body">
 				<form action="register.jsp">
 					<div class="form-group">
-						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="" readonly>
+						Route ID : <input type="text" style="width:170px;" id="route_id" name="route_id" value="" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	From : <input type="text" style="width:150px" name="from" placeholder="From Airport">
-				    	Via : <input type="text" style="width:150px" name="from" placeholder="Inbetween">
-				    	To : <input type="text" style="width:150px" name="from" placeholder="To Airport">
+				    	Source &emsp;: <input type="text" style="width:150px;" name="source" placeholder="From Airport" required>
+				    	Destination : <input type="text" style="width:150px;" name="destination" placeholder="To Airport" required>
 				    </div>
 				    <br>
-				    <div class="form-group">
-				    	Arrival time : <input type="text" style="width:150px" name="from" value="" readonly>
-				    	Departure time : <input type="text" style="width:150px" name="from" value="" readonly>
-				    </div>
-				    <br>
-				    <div class="form-group">
-				    	Class : <input type="text" style="width:150px" name="class" value="Economy" readonly>
-				    </div>
+				    <div class="input-group mb-3">
+					    Distance : <input type="number" style="width:50px; margin-left:3px;" placeholder="0">
+					    <div class="input-group-append">
+					      <span class="input-group-text">km</span>
+					    </div>
+					  </div>
 				    <br>
     				<div class="form-group">
-				      <label for="fare">Fare &#8377</label>
-				      <input type="number" style="width:150px" id="fare" name="fare" value="" readonly>
+				      <label for="fare">Fare &emsp; &#8377 :</label>
+				      <input type="number" style="width:100px" id="fare" name="fare" value="" required>
     				</div>
 				
     				<div class="d-flex justify-content-center">
