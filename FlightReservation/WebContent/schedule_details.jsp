@@ -83,10 +83,10 @@ align-content: center;
 }
 .card{
 height: 470px;
-margin-left:200px; 
+margin-left:175px; 
 margin-top: 0px;
 margin-bottom: auto;
-width: 900px;
+width: 1100px;
 background-color: rgba(0,0,0,0.5) !important;
 overflow-y:auto;
 }
@@ -228,46 +228,36 @@ color:#FFC312;
 					<table class="table table-hover">
 					    <thead>
 					      <tr>
-					        <th>Flights</th>
-					        <th>From</th>
-					        <th>To</th>
-					        <th>Arrival time</th>
-					        <th>Departure time</th>
-					        <th>Seats booked</th>
+					        <th>Schedule ID</th>
+					        <th>Flight ID</th>
+					        <th>Route ID</th>
+					        <th>Travel Duration</th>
+					        <th>Available Days</th>
+					        <th>Departure Time</th>
 					        <th></th>
 					        <th></th>
 					      </tr>
 					    </thead>
 					    <tbody>
 					      <tr>
-					        <td>cbe-bgr</td>
-					        <td>coimbatore</td>
-					        <td>bangalore</td>
-					        <th>10:00</th>
-					        <td>12:00</td>
-					        <td>90</td>
+					        <td>cbbg1234</td>
+					        <td>cbbg5678</td>
+					        <td>cbbg9101</td>
+					        <th>2 hours</th>
+					        <td>Mon,Wed,Fri</td>
+					        <td>10:00</td>
 					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8031/frontend/edit_schedule.jsp">Edit</a></td>
-					        
+					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					      <tr>
-					        <td>mas-cstm</td>
-					        <td>chennai</td>
-					        <td>mumbai</td>
-					        <th>10:00</th>
-					        <td>12:00</td>
-					        <td>87</td>
+					        <td>cbbg1234</td>
+					        <td>cbbg5678</td>
+					        <td>cbbg9101</td>
+					        <th>2 hours</th>
+					        <td>Mon,Wed,Fri</td>
+					        <td>10:00</td>
 					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8031/frontend/edit_schedule.jsp">Edit</a></td>
-					        
-					      </tr>
-					      <tr>
-					        <td>mas-cstm</td>
-					        <td>chennai</td>
-					        <td>mumbai</td>
-					        <th>10:00</th>
-					        <td>12:00</td>
-					        <td>81</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8031/frontend/edit_schedule.jsp">Edit</a></td>
-					        
+					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					    </tbody>
 					</table>
@@ -275,7 +265,7 @@ color:#FFC312;
 			</div>
 			<div class="card-footer text-center">
 				
-				<p  class="text-white"> Can edit the arrival and departure timings </p>
+				<p  class="text-white"> scroll to edit the details </p>
 				
 			</div>
 		</div>
