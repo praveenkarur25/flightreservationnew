@@ -231,24 +231,20 @@ form{
 			</div>
 			<div class="card-body">
 				<form action="register.jsp">
-					<div class="form-group">
-						Schedule ID &emsp;&emsp;: <input type="text" style="width:170px" id="schedule_id" name="schedule_id" value="" required>
+				    <div class="form-group">
+				    	Flight ID&emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:150px" name="flight_id" value="" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	Flight ID &emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:150px" name="flight_id" value="" required>
-				    </div>
-				    <br>
-				    <div class="form-group">
-				    	Route ID &emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:150px" name="route_id" value="" required>
+				    	Route ID&emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:150px" name="route_id" value="" required>
 				    </div>
 				    <br>
 				    <div class="row">
 				    	<div class="col">
-				    		Departure Time : <input type="text" style="width:150px; margin-left:3px" name="dept_time" placeholder="00:00" value="" required>
+				    		Departure Time : <input type="text" style="width:150px; margin-left:0px" name="dept_time" placeholder="00:00" value="" required>
 					    </div>
 					    <div class="col input-group mb-3">
-						    Travel Duration : <input type="number" style="width:60px; margin-left:3px;" placeholder="0" value="" required>
+						    Travel Duration: <input type="number" style="width:60px; margin-left:3px;" placeholder="0" value="" required>
 						    <div class="input-group-append">
 						      <span class="input-group-text">Hours</span>
 						    </div>
@@ -256,7 +252,7 @@ form{
 					</div>	
 				    <br>
     				<div class="form-group">
-				      <label for="Available Days">Available Days &emsp;:</label>
+				      <label for="Available Days">Available Days&emsp;:</label>
 				      <input type="checkbox" name="vehicle" value="Bike">Mon
 				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Tue
 				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Wed
