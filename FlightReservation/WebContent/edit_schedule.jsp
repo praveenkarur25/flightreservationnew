@@ -232,27 +232,38 @@ form{
 			<div class="card-body">
 				<form action="register.jsp">
 					<div class="form-group">
-						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" value="" readonly>
+						Schedule ID &emsp;&emsp;: <input type="text" style="width:170px" id="schedule_id" name="schedule_id" value="" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	From : <input type="text" style="width:150px" name="from" placeholder="From Airport" readonly>
-				    	
-				    	To : <input type="text" style="width:150px" name="from" placeholder="To Airport" readonly>
+				    	Flight ID &emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:150px" name="flight_id" value="" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	Arrival time : <input type="text" style="width:150px" name="from" value="">
-				    	Departure time : <input type="text" style="width:150px" name="from" value="">
+				    	Route ID &emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:150px" name="route_id" value="" required>
 				    </div>
 				    <br>
-				    <div class="form-group">
-				    	Class : <input type="text" style="width:150px" name="class" value="Economy" readonly>
-				    </div>
+				    <div class="row">
+				    	<div class="col">
+				    		Departure Time : <input type="text" style="width:150px; margin-left:3px" name="dept_time" placeholder="00:00" value="" required>
+					    </div>
+					    <div class="col input-group mb-3">
+						    Travel Duration : <input type="number" style="width:60px; margin-left:3px;" placeholder="0" value="" required>
+						    <div class="input-group-append">
+						      <span class="input-group-text">Hours</span>
+						    </div>
+						</div>
+					</div>	
 				    <br>
     				<div class="form-group">
-				      <label for="fare">Fare &#8377</label>
-				      <input type="number" style="width:150px" id="fare" name="fare" value="" readonly>
+				      <label for="Available Days">Available Days &emsp;:</label>
+				      <input type="checkbox" name="vehicle" value="Bike">Mon
+				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Tue
+				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Wed
+				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Thu
+				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Fri
+				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Sat
+				      &emsp;<input type="checkbox" name="vehicle" value="Bike">Sun
     				</div>
 				
     				<div class="d-flex justify-content-center">
