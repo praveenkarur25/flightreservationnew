@@ -176,6 +176,19 @@ color:#FFC312;
 	background-color:#ffc312;
 	color:black !important;
 }
+
+.breadth {
+  width: 15%;
+}
+.breadth3 {
+  width: 11%;
+}
+.breadth1 {
+  width: 17%;
+}
+.breadth2 {
+  width: 25%;
+}
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -228,7 +241,6 @@ color:#FFC312;
 					<table class="table table-hover">
 					    <thead>
 					      <tr>
-					        <th>Schedule ID</th>
 					        <th>Flight ID</th>
 					        <th>Route ID</th>
 					        <th>Travel Duration</th>
@@ -240,7 +252,6 @@ color:#FFC312;
 					    </thead>
 					    <tbody>
 					      <tr>
-					        <td>cbbg1234</td>
 					        <td>cbbg5678</td>
 					        <td>cbbg9101</td>
 					        <th>2 hours</th>
@@ -250,7 +261,6 @@ color:#FFC312;
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					      <tr>
-					        <td>cbbg1234</td>
 					        <td>cbbg5678</td>
 					        <td>cbbg9101</td>
 					        <th>2 hours</th>
