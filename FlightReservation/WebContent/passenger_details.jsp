@@ -228,51 +228,29 @@ color:#FFC312;
 					<table class="table table-hover">
 					    <thead>
 					      <tr>
-					      	<th>Passenger Name</th>
-					        <th>Flight Name</th>
-					        <th>From</th>
-					        <th>To</th>
-					        <th>Date</th>
+					      	<th>Reservation ID</th>
+					        <th>Passenger Name</th>
+					        <th>Age</th>
+					        <th>Gender</th>
 					        <th>Seat No</th>
-					        <th>Class</th>
-					        
-					      </tr>
+			              </tr>
 					    </thead>
 					    <tbody>
 					      <tr>
-					      	<td>Kumar</td>
-					        <td>cbe-bgr</td>
-					        <td>coimbatore</td>
-					        <td>bangalore</td>
-					        <th>10/01/2019</th>
+					      	<td>cbba1234</td>
+					        <td>Kumar</td>
+					        <td>21</td>
+					        <td>M</td>
 					        <td>5C</td>
-					        <td>Economy</td>
-					        
-					        
-					      </tr>
+					     </tr>
 					      <tr>
+					      	<td>cbba1234</td>
 					        <td>Kumar</td>
-					        <td>cbe-bgr</td>
-					        <td>coimbatore</td>
-					        <td>bangalore</td>
-					        <th>10/01/2019</th>
-					        <td>5A</td>
-					        <td>First</td>
-					        
-					        
-					      </tr>
-					      <tr>
-					        <td>Kumar</td>
-					        <td>cbe-bgr</td>
-					        <td>coimbatore</td>
-					        <td>bangalore</td>
-					        <th>10/01/2019</th>
-					        <td>5B</td>
-					        <td>Business</td>
-					        
-					        
-					      </tr>
-					    </tbody>
+					        <td>21</td>
+					        <td>M</td>
+					        <td>5C</td>
+					     </tr>
+			           </tbody>
 					</table>
 				</form>
 			</div>
