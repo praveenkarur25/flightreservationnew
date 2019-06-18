@@ -91,17 +91,14 @@ height: 10%;
   width: 75%;
   padding: 0 10px;
 }
-
 /* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;}
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column1 {
@@ -365,17 +362,17 @@ color:#FFC312;
 						<form>
 							<div class="row">
 								<div class="col">
-									<label for="from">From:</label>
+									<label for="from">Source&emsp;&emsp;&emsp;:</label>
 	    							<input type="text" id="from" readonly>
 								</div>
 								<div class="col">
-									<label for="to">To:</label>
+									<label for="to">Destination&emsp;&emsp;:</label>
 	    							<input type="text" id="to" readonly>
 								</div>
 							</div><br>
 							<div class="row">
 								<div class="col">
-									<label for="arr_time">Arrival Time:</label>
+									<label for="arr_time">Arrival Time :</label>
 	    							<input type="text" id="arr_time" style="width:100px;" readonly>
 								</div>
 								<div class="col">
@@ -436,27 +433,27 @@ color:#FFC312;
 	    							<input type="text" id="doorno" style="width:60px;" required>
 								</div>
 								<div class="col2" style="width:65%;">
-									<label for="streetname">Streetname:</label>
-	    							<input type="text" id="streetname" style="width:300px;" required>
+									<label for="streetname">&emsp;&emsp;&emsp;&emsp;Street:</label>
+	    							<input type="text" id="streetname" style="width:310px;" required>
 								</div><br><br>
 								</div>
 								<div class="row">
-								<label for="addressline">Address Line1:</label>
-	    							<input type="text" id="addressline"style="width:560px;"  required>
+								<label for="addressline">Address Line1&emsp;:</label>
+	    							<input type="text" id="addressline"style="width:565px; margin-left:4px;"  required>
 								</div><br>
 								<div class="row">
 								<div class="col1"style="width:45%;">
-									<label for="city">City/Town:</label>
-	    							<input type="text" id="city" style="width:230px;" required>
+									<label for="city">City/Town&emsp;&emsp;&emsp;:</label>
+	    							<input type="text" id="city" style="width:200px;" required>
 								</div>
 								<div class="col2"style="width:55%;">
 									<label for="state">State:</label>
-	    							<input type="text" id="state" style="width:230px;" required>
+	    							<input type="text" id="state" style="width:302px;" required>
 								</div>
 								</div><br>
 								<div class="row">
-								<label for="pincode">Pincode:</label>
-	    							<input type="text" id="pincode"style="width:150px;"required>
+								&nbsp;<label for="pincode">Pincode&emsp;&emsp;&emsp;&emsp;:</label>
+	    							<input type="text" id="pincode"style="width:150px; margin-left:4px;"required>
 								</div><br>
 								<div class="text-center">
 									<input class="btn btn-primary" style="align:center;" type="submit" value="submit">
