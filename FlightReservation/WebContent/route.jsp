@@ -172,12 +172,10 @@ color:#FFC312;
 	background:black;
 	border:none !important;
 }
-
 .highlight{
 	background-color:#ffc312;
 	color:black !important;
 }
-
 </style>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
@@ -230,47 +228,35 @@ color:#FFC312;
 					<table class="table table-hover">
 					    <thead>
 					      <tr>
-					        <th class="col-sm-3">Flights</th>
-					        <th>Time</th>
-					        <th>From</th>
-					        <th>Via</th>
-					        <th>To</th>
-					        <th class="col-sm-4">Seats booked</th>
+					        <th>Route ID</th>
+					        <th>Source</th>
+					        <th>Destination</th>
+					        <th>Distance</th>
+					        <th class="col-sm-4">Fare</th>
 					        <th></th>
 					        <th></th>
 					      </tr>
 					    </thead>
 					    <tbody>
 					      <tr>
-					        <td>cbe-bgr</td>
-					        <td>10:00 am</td>
-					        <td>coimbatore</td>
-					        <td>Chennai</td>
+					        <td>maba1234</td>
+					        <td>madras</td>
 					        <td>bangalore</td>
-					        <td>50</td>
+					        <td>300</td>
+					        <td>2500</td>
 					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/route_edit.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td>
 					      </tr>
 					      <tr>
-					        <td>mas-cstm</td>
-					        <td>12:00 pm</td>
-					        <td>chennai</td>
-					        <td> </td>
-					        <td>mumbai</td>
-					        <td>100</td>
+					        <td>maba1234</td>
+					        <td>madras</td>
+					        <td>bangalore</td>
+					        <td>300</td>
+					        <td>2500</td>
 					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/route_edit.jsp">Edit</a></td>
 					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
 					      </tr>
-					      <tr>
-					        <td>mas-cstm</td>
-					        <td>12:00 pm</td>
-					        <td>chennai</td>
-					        <td> </td>
-					        <td>mumbai</td>
-					        <td>70</td>
-					        <td><a class="btn btn-primary btn-sm" href="http://localhost:8037/My_website/route_edit.jsp">Edit</a></td>
-					        <td><a class="btn btn-danger btn-sm" href="#">Delete</a></td> 
-					      </tr>
+					      
 					    </tbody>
 					</table>
 				</form>
