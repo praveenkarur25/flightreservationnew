@@ -91,14 +91,17 @@ height: 10%;
   width: 75%;
   padding: 0 10px;
 }
+
 /* Remove extra left and right margins, due to padding */
 .row {margin: 0 -5px;}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column1 {
@@ -118,7 +121,6 @@ margin-top: 50;
 margin-bottom: auto;
 background-color: rgba(0,0,0,0.5) !important;
 overflow-x:auto;
-overflow-y:auto;
 }
 .card-title h1{
 color: white;
@@ -128,16 +130,6 @@ padding:20px 10px 0px 30px;
 .card-header h6{
 color: white;
 text-align: center;
-}
-.input-group-prepend span{
-width: 50px;
-background-color: #FFC312;
-color: black;
-border:0 !important;
-}
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
 }
 .login_btn{
 color: black;
@@ -175,13 +167,91 @@ color:#FFC312;
 	background:grey;
 	border:none !important;
 }
-.inpStyle{
-	width:34px;
-	height:20px;
-	font-size:9.3px;
-}
+
 .tname{
 	background:#007bff;
+}
+
+<!-- SEAT LAYOUT -->
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seats {
+ display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.seat {
+  display: flex;
+  flex: 0 0 14.28571428571429%;
+  padding: 1px;
+  position: relative;
+}
+.seat:nth-child(3) {
+  margin-right: 14.28571428571429%;
+}
+.seat input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+.seat input[type=checkbox]:checked + label {
+  background: black;
+}
+.seat input[type=checkbox]:disabled + label {
+  background: grey;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.seat input[type=checkbox]:disabled + label:after {
+  content: "X";
+  text-indent: 0;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.seat input[type=checkbox]:disabled + label:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1rem;
+  padding: 5px 0;
+  background:#007bff;
+  border-radius: 5px;
+ 
+}
+.seat label:before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+}
+.seat label:hover {
+  cursor: pointer;
+  box-shadow:black;
+  background:#FFC312;
+}
+.seat label:active {
+background:black;
+}
+.seat label:focus {
+background:black;
 }
 </style>
 <body>
@@ -217,143 +287,452 @@ color:#FFC312;
 	<div class="h-100">
 		<div class="row">
 			<div class="column1">
-				<div class="card">
+				<div class="card text-center">
 					<div class="card-body">
 						<h5 class="card-title text-white text-center">Seat Layout</h5>
-						<form name="login" action="">
-							<div class="input-group form-group  d-flex justify-content-center seatClass">
+						<form class="text-center">
+				 	<div class="input-group form-group  d-flex justify-content-center seatClass">
 								Economy Class
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1A" value="1A" onClick="validation(this);" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1A" value="1B" onClick="validatio(this);" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1C" value="1C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="1D" value="1D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1E" value="1E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="1F" value="1F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="2A" value="2A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="2B" value="2B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="2C" value="2C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="2D" value="2D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="2E" value="2E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="2F" value="2F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="3A" value="3A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="3B" value="3B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="3C" value="3C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="3D" value="3D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="3E" value="3E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="3F" value="3F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="4A" value="4A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="4B" value="4B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="4C" value="4C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="4D" value="4D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="4E" value="4E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="4F" value="4F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5A" value="5A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5B" value="5B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5C" value="5C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="5D" value="5D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5E" value="5E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="5F" value="5F" disabled readonly>
-								</div>
-								First Class
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="6A" value="6A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="6B" value="6B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="6C" value="6C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="6D" value="6D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="6E" value="6E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="6F" value="6F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="7A" value="7A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="7B" value="7B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="7C" value="7C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="7D" value="7D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="7E" value="7E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="7F" value="7F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="8A" value="8A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="8B" value="8B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="8C" value="8C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="8D" value="8D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="8E" value="8E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="8F" value="8F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="9A" value="9A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="9B" value="9B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="9C" value="9C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="9D" value="9D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="9E" value="9E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="9F" value="9F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="10A" value="10A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="10B" value="10B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="10C" value="10C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="10D" value="10D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="10E" value="10E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="10F" value="10F" readonly>
-								</div>
-								Business Class
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="11A" value="11A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="11B" value="11B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="11C" value="11C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="11D" value="11D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="11E" value="11E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="11F" value="11F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="12A" value="12A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="12B" value="12B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="12C" value="12C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="12D" value="12D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="12E" value="12E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="12F" value="12F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="13A" value="13A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="13B" value="13B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="13C" value="13C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="13D" value="13D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="13E" value="13E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="13F" value="13F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="14A" value="14A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="14B" value="14B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="14C" value="14C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="14D" value="14D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="14E" value="14E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="14F" value="14F" readonly>
-								</div>
-								<div class="btn-group">
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="15A" value="15A" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="15B" value="15B" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="15C" value="15C" readonly>
-									<input class="btn btn-primary btn-sm inpStyle ml-4" type="text" id="15D" value="15D" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="15E" value="15E" readonly>
-									<input class="btn btn-primary btn-sm inpStyle" type="text" id="15F" value="15F" readonly>
-								</div>
-							</div>
-							
-						</form>
-						
-					</div>
-					<p class="text-white"> Seats: <span id = "display_message"></span> </p>
-					
-				</div>
+				    <div>
+				  
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="1A" />
+				          <label for="1A">1A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="1B" />
+				          <label for="1B">1B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="1C" />
+				          <label for="1C">1C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="1D" />
+				          <label for="1D">1D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="1E" />
+				          <label for="1E">1E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="1F" disabled/>
+				          <label for="1F">1F</label>
+				        </li>
+				        </ol>
+			
+				   
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="2A" />
+				          <label for="2A">2A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="2B" />
+				          <label for="2B">2B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="2C" />
+				          <label for="2C">2C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="2D" />
+				          <label for="2D">2D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="2E" />
+				          <label for="2E">2E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="2F" />
+				          <label for="2F">2F</label>
+				        </li>
+				      </ol>
+				    
+				   
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="3A" />
+				          <label for="3A">3A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="3B" />
+				          <label for="3B">3B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="3C" />
+				          <label for="3C">3C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="3D" />
+				          <label for="3D">3D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="3E" />
+				          <label for="3E">3E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="3F" />
+				          <label for="3F">3F</label>
+				        </li>
+				      </ol>
+				   
+				   
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="4A" />
+				          <label for="4A">4A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="4B" />
+				          <label for="4B">4B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="4C" />
+				          <label for="4C">4C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="4D" />
+				          <label for="4D">4D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="4E" />
+				          <label for="4E">4E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="4F" />
+				          <label for="4F">4F</label>
+				        </li>
+				      </ol>
+				     
+				    
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="5A" />
+				          <label for="5A">5A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="5B" />
+				          <label for="5B">5B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="5C" />
+				          <label for="5C">5C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="5D" />
+				          <label for="5D">5D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="5E" />
+				          <label for="5E">5E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="5F" />
+				          <label for="5F">5F</label>
+				        </li>
+				      </ol>
+				    
+				    
+				          Business Class
+				    
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="6A" />
+				          <label for="6A">6A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="6B" />
+				          <label for="6B">6B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="6C" />
+				          <label for="6C">6C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="6D" />
+				          <label for="6D">6D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="6E" />
+				          <label for="6E">6E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="6F" />
+				          <label for="6F">6F</label>
+				        </li>
+				      </ol>
+				    
+				    
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="7A" />
+				          <label for="7A">7A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="7B" />
+				          <label for="7B">7B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="7C" />
+				          <label for="7C">7C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="7D" />
+				          <label for="7D">7D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="7E" />
+				          <label for="7E">7E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="7F" />
+				          <label for="7F">7F</label>
+				        </li>
+				      </ol>
+				    
+				  
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="8A" />
+				          <label for="8A">8A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="8B" />
+				          <label for="8B">8B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="8C" />
+				          <label for="8C">8C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="8D" />
+				          <label for="8D">8D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="8E" />
+				          <label for="8E">8E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="8F" />
+				          <label for="8F">8F</label>
+				        </li>
+				      </ol>
+				    
+				    
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="9A" />
+				          <label for="9A">9A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="9B" />
+				          <label for="9B">9B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="9C" />
+				          <label for="9C">9C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="9D" />
+				          <label for="9D">9D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="9E" />
+				          <label for="9E">9E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="9F" />
+				          <label for="9F">9F</label>
+				        </li>
+				      </ol>
+				    
+				    
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="10A" />
+				          <label for="10A">10A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="10B" />
+				          <label for="10B">10B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="10C" />
+				          <label for="10C">10C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="10D" />
+				          <label for="10D">10D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="10E" />
+				          <label for="10E">10E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="10F" />
+				          <label for="10F">10F</label>
+				        </li>
+				      </ol>
+				    
+				    
+				    First Class
+				    <li class="row row--11">
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="11A" />
+				          <label for="11A">11A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="11B" />
+				          <label for="11B">11B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="11C" />
+				          <label for="11C">11C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="11D" />
+				          <label for="11D">11D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="11E" />
+				          <label for="11E">11E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="11F" />
+				          <label for="11F">11F</label>
+				        </li>
+				       </ol>
+				    </li>
+				    <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="12A" />
+				          <label for="12A">12A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="12B" />
+				          <label for="12B">12B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="12C" />
+				          <label for="12C">12C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="12D" />
+				          <label for="12D">12D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="12E" />
+				          <label for="12E">12E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="12F" />
+				          <label for="12F">12F</label>
+				        </li>
+				      </ol>
+				    
+				    <li class="row row--13">
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="13A" />
+				          <label for="13A">13A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="13B" />
+				          <label for="13B">13B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="13C" />
+				          <label for="13C">13C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="13D" />
+				          <label for="13D">13D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="13E" />
+				          <label for="13E">13E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="13F" />
+				          <label for="13F">13F</label>
+				        </li>
+				      </ol>
+				    </li>
+				    <li class="row row--14">
+				      <ol class="seats" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="14A" />
+				          <label for="14A">14A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="14B" />
+				          <label for="14B">14B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="14C" />
+				          <label for="14C">14C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="14D" />
+				          <label for="14D">14D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="14E" />
+				          <label for="14E">14E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="14F" />
+				          <label for="14F">14F</label>
+				        </li>
+				      </ol>
+				    </li>
+				    <li class="row row--15">
+				      <ol class="seats text-center" type="A">
+				        <li class="seat">
+				          <input type="checkbox" id="15A" />
+				          <label for="15A">15A</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="15B" />
+				          <label for="15B">15B</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="15C" />
+				          <label for="15C">15C</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="15D" />
+				          <label for="15D">15D</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="15E" />
+				          <label for="15E">15E</label>
+				        </li>
+				        <li class="seat">
+				          <input type="checkbox" id="15F"  />
+				          <label for="15F">15F</label>
+				        </li>
+				      </ol>
+				    </li>
+				</div> 
 			</div>
+					<div class="row">
+						<div class="col-5">
+							<span class="total-score text-white" id="count"><h5>Seat:<span class="number">0</span></span></h5>
+ 						</div>
+ 						<div class="col-4"></div>
+ 						<div class="col-3">
+							<button type="submit" class="btn btn-primary">done</button>
+ 						</div>
+ 					</div>		
+ 				</form>
+			</div>
+		</div>
+	</div>
+			
 			
 			<div class="column2">
 				<div class="card text-white">
@@ -362,17 +741,17 @@ color:#FFC312;
 						<form>
 							<div class="row">
 								<div class="col">
-									<label for="from">Source&emsp;&emsp;&emsp;:</label>
+									<label for="from">From:</label>
 	    							<input type="text" id="from" readonly>
 								</div>
 								<div class="col">
-									<label for="to">Destination&emsp;&emsp;:</label>
+									<label for="to">To:</label>
 	    							<input type="text" id="to" readonly>
 								</div>
 							</div><br>
 							<div class="row">
 								<div class="col">
-									<label for="arr_time">Arrival Time :</label>
+									<label for="arr_time">Arrival Time:</label>
 	    							<input type="text" id="arr_time" style="width:100px;" readonly>
 								</div>
 								<div class="col">
@@ -433,27 +812,27 @@ color:#FFC312;
 	    							<input type="text" id="doorno" style="width:60px;" required>
 								</div>
 								<div class="col2" style="width:65%;">
-									<label for="streetname">&emsp;&emsp;&emsp;&emsp;Street:</label>
-	    							<input type="text" id="streetname" style="width:310px;" required>
+									<label for="streetname">Streetname:</label>
+	    							<input type="text" id="streetname" style="width:300px;" required>
 								</div><br><br>
 								</div>
 								<div class="row">
-								<label for="addressline">Address Line1&emsp;:</label>
-	    							<input type="text" id="addressline"style="width:565px; margin-left:4px;"  required>
+								<label for="addressline">Address Line1:</label>
+	    							<input type="text" id="addressline"style="width:560px;"  required>
 								</div><br>
 								<div class="row">
 								<div class="col1"style="width:45%;">
-									<label for="city">City/Town&emsp;&emsp;&emsp;:</label>
-	    							<input type="text" id="city" style="width:200px;" required>
+									<label for="city">City/Town:</label>
+	    							<input type="text" id="city" style="width:230px;" required>
 								</div>
 								<div class="col2"style="width:55%;">
 									<label for="state">State:</label>
-	    							<input type="text" id="state" style="width:302px;" required>
+	    							<input type="text" id="state" style="width:230px;" required>
 								</div>
 								</div><br>
 								<div class="row">
-								&nbsp;<label for="pincode">Pincode&emsp;&emsp;&emsp;&emsp;:</label>
-	    							<input type="text" id="pincode"style="width:150px; margin-left:4px;"required>
+								<label for="pincode">Pincode:</label>
+	    							<input type="text" id="pincode"style="width:150px;"required>
 								</div><br>
 								<div class="text-center">
 									<input class="btn btn-primary" style="align:center;" type="submit" value="submit">
@@ -467,6 +846,18 @@ color:#FFC312;
 	</div>
 
 </body>
+<script type="text/javascript">
+//console.clear()
+const total = document.querySelector('.total-score .number')
+//Option 1 - event delegation
+document.querySelector('.wrapper').addEventListener('change', function(event) {
+const numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
+total.innerHTML = numberAll
+
+const list = event.target.closest('.list')
+const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
+list.querySelector('.list-score.number').innerHTML = numberList})
+		</script>
 <script>
 $(document).on("scroll", function(){
 	if
@@ -479,21 +870,5 @@ $(document).on("scroll", function(){
 	}
 });
 </script>
-<script>
-function validation(form)
-{
-	if(document.getElementById("1A").active == true)
-		document.getElementById("1A").active = false;
-	else
-		document.getElementById("Button").active = true;
-}
-</script>
-<script>
-function toggleActiveState() {
-    this.classList.toggle('active');
-}
-var btns = document.querySelectorAll('.btn btn-primary btn-sm inpStyle');
-[].forEach.call(btns, function() {
-  btn.addEventListener('click', toggleActiveState, false);
-});
+
 </html>
