@@ -9,13 +9,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Seat Booking</title>
+	<title>User Page</title>
    
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Numans');
@@ -193,11 +194,11 @@ ol {
   position: relative ;
 }
 .seat:nth-child(3) {
-  margin-right: 10.28571428571429%;
+  margin-right: 14%;
 }
 
 .seat:nth-child(6) {
-  margin-right: 14.28571428571429%;
+  margin-right: 10%;
 }
 .seat label:nth-child(7) {
   background: grey;
@@ -233,12 +234,12 @@ ol {
   width: 100%;
   
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
   line-height: 1rem;
-  padding: 5px 0 !important;
+  padding: 5px 2px !important;
   background:#007bff;
-  border-radius: 4px;
+  border-radius: 3px;
   margin-bottom: -.9rem;
  
 }
@@ -268,7 +269,7 @@ background:black;
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 	<div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="#"><span>ABC</span> FLIGHT SERVICES</a>
+  <a class="navbar-brand" href="#">ABC FLIGHT SERVICES</a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -280,8 +281,18 @@ background:black;
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item">
-        <a class="nav-link" href="#">Logout</a>
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/user.jsp" style="color:#ffc312;"><i class="fas fa-home" style="color:#ffc312;"></i>Home</a>
       </li>
+	   <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/Aboutus.jsp"><i class="fas fa-ticket-alt"></i>My Bookings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/Aboutus.jsp"><i class="fas fa-user"></i>My Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/login.jsp" id="logout" onClick="return confirmed()"><i class="fas fa-sign-out-alt"></i>Logout</a>
+      </li>
+    
     </ul>
   </div>
 	</div>
@@ -290,19 +301,24 @@ background:black;
 
 <section id="about">
 <div class="container">
+	<div class="text-intro">
 	
+		<p></p>
+	</div>
 </div>
 </section>
-<div class="container">
+
+
+	<div class="container">
 	<div class="h-100">
 		<div class="row">
 			<div class="column1">
 				<div class="card">
 					<div class="card-body">
 						<h6 class="card-title text-white text-center">Seat Layout</h6>
-						<form class="text-center">
+					<form class="text-center" name="check">
 				 	<div class="input-group form-group  d-flex justify-content-start seatClass">
-								<p class="text-white ml-4">Economy Class</p>
+								<p class="text-white ml-5 mb-0">Economy Class</p>
 				    <div class="wrapper">
 				  
 				      <ol class="seats" type="A">
@@ -450,7 +466,7 @@ background:black;
 				      </ol>
 				    
 				    
-				          <p class="text-white ml-4">Business Class</p>
+				          <p class="text-white ml-4 mb-0">Business Class</p>
 				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
@@ -597,7 +613,7 @@ background:black;
 				      </ol>
 				    
 				    
-				    <p class="text-white ml-4">First Class</p>
+				    <p class="text-white ml-4 mb-0">First Class</p>
 				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
@@ -746,8 +762,9 @@ background:black;
 						<div class="col-5">
 							<span class="total-score text-white" id="count"><h6 class="mt-2"><mark style="background:#ffc312;">Seat:<span class="number">0</span></span></mark></h6>
  						</div>
+ 	
  						<div class="col-3">
-							<button type="submit" class="btn btn-primary btn-sm-2">done</button>
+							<input type="button" onclick="return validation()" class="btn btn-primary btn-sm-2 ml-5" value="done">
  						</div>
  					</div>		
  				</form>
@@ -854,7 +871,7 @@ background:black;
 								</div><br>
 								<div class="row">
 								<label for="pincode">Pincode:</label>
-	    							<input type="text" id="pincode"style="width:150px;"required>
+	    							<input type="tel" id="pincode" style="width:150px;" maxlength="6" pattern ="[0-9]{6}" required>
 								</div><br>
 								<div class="text-center">
 									<input class="btn btn-primary" style="align:center;" type="submit" value="submit">
@@ -868,18 +885,28 @@ background:black;
 	</div>
 
 </body>
-<script type="text/javascript">
-//console.clear()
-const total = document.querySelector('.total-score .number')
-//Option 1 - event delegation
-document.querySelector('.wrapper').addEventListener('change', function(event) {
-const numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
-total.innerHTML = numberAll
 
-const list = event.target.closest('.list')
-const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
-list.querySelector('.list-score.number').innerHTML = numberList})
-		</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	<script src="js/main.js"></script>
+<script type="text/javascript">
+function verify_clicks(numberOfBlanks) {
+	
+	var chkBoxCount = numberOfBlanks.length; // Total number of checkboxes, used in for loop
+	var totalChecked=0; // default to zero
+	for (var i = 0; i < chkBoxCount; i++) {  // loop through each checkbox
+		if (eval("numberOfBlanks[" + i + "].checked") == true) { // see if it's checked
+			totalChecked += 1; // if so, incriment the counter
+	 	}
+	}
+	if(totalChecked > 2) {  // now test the results
+	   alert("More than 2 checked");
+	}
+	else {
+	   alert("2 or less checked");
+	}
+}
+</script>
 <script>
 $(document).on("scroll", function(){
 	if
@@ -893,4 +920,38 @@ $(document).on("scroll", function(){
 });
 </script>
 
+<script>
+function confirmed()
+{
+	if(confirm('Are you sure want to logout?')) {
+        return true;
+    }
+    return false;
+	}
+</script>
+<script type="text/javascript">
+var numberAll
+//console.clear()
+const total = document.querySelector('.total-score .number')
+//Option 1 - event delegation
+document.querySelector('.wrapper').addEventListener('change', function(event) {
+numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
+total.innerHTML = numberAll
+
+if(numberAll >= 4)
+	alert("Reached max limit");
+const list = event.target.closest('.list')
+const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
+list.querySelector('.list-score.number').innerHTML = numberList})
+
+</script>
+<script type="text/javascript">
+function validation()
+{
+
+if(numberAll>4)
+	alert(" limit exceeded");
+
+}
+</script>
 </html>
