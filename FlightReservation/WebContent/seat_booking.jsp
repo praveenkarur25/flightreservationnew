@@ -161,25 +161,21 @@ color:#FFC312;
 	border:none !important;
 }
 .btn:focus{
-	background:green;
-	border:none !important;
+		border:none !important;
 }
 .btn:disabled{
 	background:grey;
 	border:none !important;
 }
-
 .tname{
 	background:#007bff;
 }
-
 <!-- SEAT LAYOUT -->
-ol {
+.ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .seats {
  display: flex;
   flex-direction: row;
@@ -232,7 +228,6 @@ ol {
   display: block;
   position: relative;
   width: 100%;
-  
   text-align: center;
   font-size: 11px;
   font-weight: bold;
@@ -270,17 +265,14 @@ background:black;
 	<div class="container">
   <!-- Brand -->
   <a class="navbar-brand" href="#">ABC FLIGHT SERVICES</a>
-
-  <!-- Toggler/collapsibe Button -->
+<!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <!-- Navbar links -->
+<!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
-      
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="http://localhost:8080/FlightReservation/user.jsp" style="color:#ffc312;"><i class="fas fa-home" style="color:#ffc312;"></i>Home</a>
       </li>
 	   <li class="nav-item">
@@ -291,25 +283,18 @@ background:black;
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:8080/FlightReservation/login.jsp" id="logout" onClick="return confirmed()"><i class="fas fa-sign-out-alt"></i>Logout</a>
-      </li>
-    
+      </li> 
     </ul>
   </div>
 	</div>
 </nav>
-
-
 <section id="about">
 <div class="container">
 	<div class="text-intro">
-	
-		<p></p>
-	</div>
+</div>
 </div>
 </section>
-
-
-	<div class="container">
+ <div class="container">
 	<div class="h-100">
 		<div class="row">
 			<div class="column1">
@@ -346,11 +331,8 @@ background:black;
 				          <input type="checkbox" id="A6"/>
 				          <label for="A6">06</label>
 				        </li>A
-				        
 				        </ol>
-			
-				   
-				      <ol class="seats" type="A">
+			          <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="B1" />
 				          <label for="B1">01</label>
@@ -375,11 +357,8 @@ background:black;
 				          <input type="checkbox" id="B6" />
 				          <label for="B6">06</label>
 				        </li>B
-				       
-				      </ol>
-				    
-				   
-				      <ol class="seats" type="A">
+				          </ol>
+				    <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="C1" />
 				          <label for="C1">01</label>
@@ -404,11 +383,8 @@ background:black;
 				          <input type="checkbox" id="C6" />
 				          <label for="C6">06</label>
 				        </li>C
-				        
-				      </ol>
-				   
-				   
-				      <ol class="seats" type="A">
+				        </ol>
+				        <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="D1" />
 				          <label for="D1">01</label>
@@ -726,8 +702,7 @@ background:black;
 				          <input type="checkbox" id="N6" />
 				          <label for="N6">06</label>
 				        </li>N
-				        
-				    </ol>
+				        </ol>
 				      <ol class="seats text-center" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="O1" />
@@ -753,10 +728,8 @@ background:black;
 				          <input type="checkbox" id="O6"  />
 				          <label for="O6">06</label>
 				        </li>O
-				        
-				      </ol>
-				    
-				</div> 
+				        </ol>
+				    </div> 
 			</div>
 					<div class="row">
 						<div class="col-5">
@@ -889,24 +862,6 @@ background:black;
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap-datepicker.min.js"></script>
 	<script src="js/main.js"></script>
-<script type="text/javascript">
-function verify_clicks(numberOfBlanks) {
-	
-	var chkBoxCount = numberOfBlanks.length; // Total number of checkboxes, used in for loop
-	var totalChecked=0; // default to zero
-	for (var i = 0; i < chkBoxCount; i++) {  // loop through each checkbox
-		if (eval("numberOfBlanks[" + i + "].checked") == true) { // see if it's checked
-			totalChecked += 1; // if so, incriment the counter
-	 	}
-	}
-	if(totalChecked > 2) {  // now test the results
-	   alert("More than 2 checked");
-	}
-	else {
-	   alert("2 or less checked");
-	}
-}
-</script>
 <script>
 $(document).on("scroll", function(){
 	if
@@ -919,39 +874,32 @@ $(document).on("scroll", function(){
 	}
 });
 </script>
-
 <script>
-function confirmed()
-{
-	if(confirm('Are you sure want to logout?')) {
-        return true;
-    }
-    return false;
-	}
+		function confirmed()
+		{
+			if(confirm('Are you sure want to logout?')) {
+		        return true;
+		    }
+		    return false;
+		}
 </script>
 <script type="text/javascript">
-var numberAll
-//console.clear()
-const total = document.querySelector('.total-score .number')
-//Option 1 - event delegation
-document.querySelector('.wrapper').addEventListener('change', function(event) {
-numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
-total.innerHTML = numberAll
-
-if(numberAll >= 4)
-	alert("Reached max limit");
-const list = event.target.closest('.list')
-const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
-list.querySelector('.list-score.number').innerHTML = numberList})
-
+		var numberAll
+		const total = document.querySelector('.total-score .number')
+		document.querySelector('.wrapper').addEventListener('change', function(event) {
+		numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
+		total.innerHTML = numberAll
+		if(numberAll >= 4 && numberAll<=4)
+			alert("Reached max limit");
+		const list = event.target.closest('.list')
+		const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
+		list.querySelector('.list-score.number').innerHTML = numberList})
 </script>
 <script type="text/javascript">
-function validation()
-{
-
-if(numberAll>4)
-	alert(" limit exceeded");
-
-}
+		function validation()
+		{
+			if(numberAll>4)
+			alert("Maximum 4 seats can be selected");
+		}
 </script>
 </html>
