@@ -1,22 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>User Page</title>
-   
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Numans');
@@ -69,7 +59,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 	width:90%;
 	margin:auto;
 	text-align:center;
-	padding-top:610px;
+	padding-top:90px;
 }
 html,body{
 background-image: url('https://static.toiimg.com/thumb/65576160/Airplane.jpg?width=748&height=499');
@@ -118,7 +108,7 @@ height: 10%;
 }
 .card{
 height: 525px;
-margin-top: 50;
+margin-top: 10;
 margin-bottom: auto;
 background-color: rgba(0,0,0,0.5) !important;
 overflow-x:auto;
@@ -273,13 +263,13 @@ background:black;
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
        <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8080/FlightReservation/user.jsp" style="color:#ffc312;"><i class="fas fa-home" style="color:#ffc312;"></i>Home</a>
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/user.jsp"><i class="fas fa-home" ></i>Home</a>
       </li>
 	   <li class="nav-item">
         <a class="nav-link" href="http://localhost:8080/FlightReservation/Aboutus.jsp"><i class="fas fa-ticket-alt"></i>My Bookings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:8080/FlightReservation/Aboutus.jsp"><i class="fas fa-user"></i>My Account</a>
+        <a class="nav-link" href="http://localhost:8080/FlightReservation/Aboutus.jsp" style="color:#ffc312;"><i class="fas fa-user" style="color:#ffc312;"></i>My Account</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://localhost:8080/FlightReservation/login.jsp" id="logout" onClick="return confirmed()"><i class="fas fa-sign-out-alt"></i>Logout</a>
@@ -356,8 +346,9 @@ background:black;
 				        <li class="seat">
 				          <input type="checkbox" id="B6" />
 				          <label for="B6">06</label>
-				        </li>B
-				          </ol>
+				        </li>
+				        B
+				        </ol>
 				    <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="C1" />
@@ -409,10 +400,7 @@ background:black;
 				          <input type="checkbox" id="D6" />
 				          <label for="D6">06</label>
 				        </li>D
-				       
 				      </ol>
-				     
-				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="E1" />
@@ -438,13 +426,9 @@ background:black;
 				          <input type="checkbox" id="E6" />
 				          <label for="E6">06</label>
 				        </li>E
-				       
-				      </ol>
-				    
-				    
-				          <p class="text-white ml-4 mb-0">Business Class</p>
-				    
-				      <ol class="seats" type="A">
+				       </ol>
+				     <p class="text-white ml-4 mb-0">Business Class</p>
+				    <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="F1" />
 				          <label for="F1">01</label>
@@ -469,10 +453,7 @@ background:black;
 				          <input type="checkbox" id="F6" />
 				          <label for="F6">06</label>
 				        </li>F
-				        
-				      </ol>
-				    
-				    
+				       </ol>
 				      <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="G1" />
@@ -498,10 +479,7 @@ background:black;
 				          <input type="checkbox" id="G6" />
 				          <label for="G6">06</label>
 				        </li>G
-				       
 				      </ol>
-				    
-				  
 				      <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="H1" />
@@ -527,11 +505,8 @@ background:black;
 				          <input type="checkbox" id="H6" />
 				          <label for="H6">06</label>
 				        </li>H
-				       
 				      </ol>
-				    
-				    
-				      <ol class="seats" type="A">
+				     <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="I1" />
 				          <label for="I1">01</label>
@@ -556,10 +531,7 @@ background:black;
 				          <input type="checkbox" id="I6" />
 				          <label for="I6">06</label>
 				        </li>I
-				        
 				      </ol>
-				    
-				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="J1" />
@@ -585,12 +557,8 @@ background:black;
 				          <input type="checkbox" id="J6" />
 				          <label for="J6">06</label>
 				        </li>J
-				        
 				      </ol>
-				    
-				    
 				    <p class="text-white ml-4 mb-0">First Class</p>
-				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="K1" />
@@ -616,9 +584,7 @@ background:black;
 				          <input type="checkbox" id="K6" />
 				          <label for="K6">06</label>
 				        </li>K
-				       
 				       </ol>
-				 
 				    <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="L1" />
@@ -644,10 +610,7 @@ background:black;
 				          <input type="checkbox" id="L6" />
 				          <label for="L6">06</label>
 				        </li>L
-				        
 				      </ol>
-				    
-				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
 				          <input type="checkbox" id="M1" />
@@ -673,13 +636,10 @@ background:black;
 				          <input type="checkbox" id="M6" />
 				          <label for="M6">06</label>
 				        </li>M
-				        
 				      </ol>
-				   
-				    
 				      <ol class="seats" type="A">
 				        <li class="seat">
-				          <input type="checkbox" id="N1" />
+				          <input type="checkbox" id="N1"/>
 				          <label for="N1">01</label>
 				        </li>
 				        <li class="seat">
@@ -737,15 +697,13 @@ background:black;
  						</div>
  	
  						<div class="col-3">
-							<input type="button" onclick="return validation()" class="btn btn-primary btn-sm-2 ml-5" value="done">
+							<input type="button" onclick="return validation()" class="btn btn-primary btn-sm-2 ml-5 verify " value="dune">
  						</div>
  					</div>		
  				</form>
 			</div>
 		</div>
 	</div>
-			
-			
 			<div class="column2">
 				<div class="card text-white">
 					<div class="card-body">
@@ -847,7 +805,7 @@ background:black;
 	    							<input type="tel" id="pincode" style="width:150px;" maxlength="6" pattern ="[0-9]{6}" required>
 								</div><br>
 								<div class="text-center">
-									<input class="btn btn-primary" style="align:center;" type="submit" value="submit">
+									<input class="btn btn-primary" onClick="return valid()" style="align:center;" type="submit" value="submit">
 								</div>
 						</form>
 					</div>
@@ -856,9 +814,7 @@ background:black;
 		</div>
 	</div>
 	</div>
-
 </body>
-
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap-datepicker.min.js"></script>
 	<script src="js/main.js"></script>
@@ -884,13 +840,20 @@ $(document).on("scroll", function(){
 		}
 </script>
 <script type="text/javascript">
-		var numberAll
+		var count=0;
+		var prev_numall = 0;
+		var numberAll=0;
 		const total = document.querySelector('.total-score .number')
 		document.querySelector('.wrapper').addEventListener('change', function(event) {
 		numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
+		if(prev_numall != numberAll){
+			count=0;
+			prev_numall = numberAll;
+		}
+		
 		total.innerHTML = numberAll
-		if(numberAll >= 4 && numberAll<=4)
-			alert("Reached max limit");
+		
+		
 		const list = event.target.closest('.list')
 		const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
 		list.querySelector('.list-score.number').innerHTML = numberList})
@@ -898,8 +861,25 @@ $(document).on("scroll", function(){
 <script type="text/javascript">
 		function validation()
 		{
-			if(numberAll>4)
-			alert("Maximum 4 seats can be selected");
+			if(numberAll>4 || numberAll<4){
+				alert("Please select only the no of seats u requested.");
+				return false;
+			}else{
+				count++;
+			}
+
 		}
 </script>
+<script type="text/javascript">
+		function valid()
+		{
+			if(count>0){
+				return true;
+			}else{
+				alert("Please press DONE button");
+				return false;
+			}
+		}
+</script>
+
 </html>
