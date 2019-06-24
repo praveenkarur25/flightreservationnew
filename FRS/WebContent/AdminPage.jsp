@@ -44,10 +44,10 @@
 	font-size: 120%;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #fff;
+    color: #fff!important;
    font-family: 'Numans', sans-serif;
 }
-.navbar-nav .nav-item .nav-link:hover{color:#FFC312;}
+.navbar-nav .nav-item .nav-link:hover{color:#FFC312 !important;}
 .navbar-expand-md .navbar-nav .dropdown-menu{
 	border-top:3px solid #fed136;
 }
@@ -63,14 +63,9 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     padding-bottom: 0;
     background-color: #212529;
 }
-.text-intro{
-	width:90%;
-	margin:auto;
-	text-align:center;
-	padding-top:610px;
-}
+
 html,body{
-background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1IPcJIr28ZsLvA-PvXHsWOg3__DJYxfwc1Mjzts_eALouWEDaAA');
+background-image: url('https://static.toiimg.com/thumb/65576160/Airplane.jpg?width=748&height=499');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -122,7 +117,9 @@ font-family: 'Numans', sans-serif;
 <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 	<div class="container">
   <!-- Brand -->
-  <a class="navbar-brand" href="#"><span>ABC</span> FLIGHT SERVICES</a>
+  <a class="navbar-brand" style="color:white;"><i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES <i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -134,21 +131,61 @@ font-family: 'Numans', sans-serif;
     <ul class="navbar-nav ml-auto">
       
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:9080/FRS/Login.jsp" id="logout" onClick="return confirmed()">Logout</a>
+        <a class="nav-link" href="http://localhost:9080/FRS/Login.jsp" id="logout" onClick="return confirmed()"><i class="fas fa-sign-out-alt">Logout</i></a>
       </li>
     </ul>
   </div>
-	</div>
+</div>
+</nav><nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+	<div class="container">
+  <!-- Brand -->
+  <a class="navbar-brand" style="color:white;"><i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES <i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:9080/FRS/Logout.jsp" id="logout" onClick="return confirmed()"><i class="fas fa-sign-out-alt">Logout</i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav><nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+	<div class="container">
+  <!-- Brand -->
+  <a class="navbar-brand" style="color:white;"><i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES <i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class = "nav-item">
+       <a class="nav-link" ><i class="fas fa-user">Welcome<% %></i></a>
+      </li>
+      <li class="nav-item">
+      
+        <a class="nav-link" href="http://localhost:9080/FRS/Logout.jsp" id="logout" onClick="return confirmed()"><i class="fas fa-sign-out-alt">Logout</i></a>
+      </li>
+    </ul>
+  </div>
+</div>
 </nav>
 
-	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4">FLIGHTS</a>
-	    <a href="#" class="pt-4">ROUTE</a>
-	    <a href="#" class="pt-4">SCHEDULE</a>
-	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
-	</div>
 
-	
 
 </body>
 

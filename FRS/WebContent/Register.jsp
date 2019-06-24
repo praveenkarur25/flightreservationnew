@@ -122,7 +122,7 @@ html, body {
 }
 
 .card {
-	height: 460px;
+	height: 480px;
 	margin-top: auto;
 	margin-bottom: auto;
 	width: 400px;
@@ -176,7 +176,9 @@ input:focus {
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 		<div class="container">
 			<!-- Brand -->
-			<a class="navbar-brand" href="#"><span>XYZ</span> FLIGHT SERVICES</a>
+			<a class="navbar-brand" style="color:white;"><i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES <i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i></a>
 
 			<!-- Toggler/collapsibe Button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -221,6 +223,7 @@ input:focus {
 				</div>
 				<div class="card-body">
 					<form name="register" action="register" method="post">
+					<div style="color:#ff0000;" >${exist}</div>
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -240,15 +243,19 @@ input:focus {
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 							</div>
-							<input type="email" class="form-control" placeholder="email"
-								name="email" required>
+							<input type="email" class="form-control" placeholder="email" 
+								name="email"  id="email" required>
 						</div>
+						
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password" class="form-control" 
-								placeholder="password" minlength="8" maxlength="16" required>
+							<input type="password" name="password" class="form-control"  onblur="return validation()"
+								placeholder="password" minlength="8" maxlength="16" id="password-field" required>
+								<div class="form-control col-sm-2">
+								<span toggle="#password-field" class="fas fa-fw fa-eye field-icon toggle-password"></span>
+								</div>
 						</div>
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
@@ -258,8 +265,9 @@ input:focus {
 								placeholder="phone" maxlength="10" minlength="10"
 								pattern="[0-9]{10}" required>
 						</div>
+						
 						<div class="form-group">
-							<input type="submit"  value="Submit" onclick="return validation()"
+							<input type="submit"  value="Submit" onclick="return validation()" 
 								class="btn float-right login_btn">
 						</div>
 					</form>
@@ -274,6 +282,18 @@ input:focus {
 		</div>
 	</div>
 </body>
+<script>
+$(".toggle-password").click(function(){
+	
+	$(this).toggleClass("fa-eye fa-eye-slash");
+	var input = $($(this).attr("toggle"));
+	if(input.attr("type")=="password"){
+		input.attr("type","text");
+	}else{
+		input.attr("type","password");
+	}
+});
+</script>
 <script>
 	$(document).on("scroll", function() {
 		if ($(document).scrollTop() > 86) {
@@ -291,11 +311,15 @@ input:focus {
 		if (!regularExpression.test(pass)) {
 			alert("Password should contain atleast 8 characters with atleast one number and one special character.");
 			return false;
+			
 
 		}
 
 		return true;
 	}
-</script>
+	
+	
+	</script>
+
 
 </html>

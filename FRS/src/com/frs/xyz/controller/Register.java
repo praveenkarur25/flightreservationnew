@@ -11,43 +11,62 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.frs.xyz.bean.XYZ_User_Bean;
+import com.frs.xyz.dao.UserDAO;
 import com.frs.xyz.service.Admin_User_Service;
 
 @WebServlet("/register")
 public class Register extends HttpServlet {
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
-		String first_Name = request.getParameter("firstname");
-		String last_Name = request.getParameter("lastname");
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String email = request.getParameter("email");
-		String password = request.getParameter("password");
 		String phoneNumber = request.getParameter("phonenumber");
-		String user_Name = first_Name + " " + last_Name;
-		XYZ_User_Bean userBean = new XYZ_User_Bean();
-		userBean.setUser_First_Name(first_Name);
-		userBean.setUser_Last_Name(last_Name);
-		userBean.setEmail(email);
-		userBean.setPassword(password);
-		userBean.setPhoneNumber(phoneNumber);
-		userBean.setUserName(user_Name);
+		boolean status = UserDAO.checkmail(email, phoneNumber);
+		if (status == false) {
+			// PrintWriter out = response.getWriter();
+			request.setAttribute("exist", "Email or phonenumber already exists");
+			// out.println("<script type=\"text/javascript\">");
+			// out.println("alert('Email or Phonenumber already exists ');");
 
-		Admin_User_Service insertDetails = new Admin_User_Service();
-		boolean insert = insertDetails.insertUser(userBean);
+			// out.println("</script>");
 
-		if (insert == true) {
+			RequestDispatcher rd = request.getRequestDispatcher("/Register.jsp");
+			rd.forward(request, response);
+			// response.sendRedirect("Register.jsp");
+		} else {
+
+			String first_Name = request.getParameter("firstname");
+			String last_Name = request.getParameter("lastname");
+
+			String password = request.getParameter("password");
+
+			String user_Name = first_Name + " " + last_Name;
+			XYZ_User_Bean userBean = new XYZ_User_Bean();
+			userBean.setUser_First_Name(first_Name);
+			userBean.setUser_Last_Name(last_Name);
+			userBean.setEmail(email);
+			userBean.setPassword(password);
+			userBean.setPhoneNumber(phoneNumber);
+			userBean.setUserName(user_Name);
+
+			Admin_User_Service insertDetails = new Admin_User_Service();
+			String userid = insertDetails.insertUser(userBean);
+			int flag = 0;
 			System.out.println("Registered successfully");
 			PrintWriter out = response.getWriter();
-
+			userBean.setUserid(userid);
 			out.println("<script type=\"text/javascript\">");
-			out.println("alert('Registered Successfully and login with your mail ID');");
+			out.println("alert('Registered Successfully and your userid is " + userid + "');");
 
 			out.println("</script>");
+			// List<XYZ_User_Bean> arraylist = new ArrayList<>();
+			/// arraylist.add(userBean);
 
-			RequestDispatcher rs = request.getRequestDispatcher("Login.jsp");
-			rs.include(request, response);
+			request.setAttribute("userid", userid);
+			flag = 1;
+			if (flag == 1) {
+				RequestDispatcher rd = request.getRequestDispatcher("/UserAcnt.jsp");
+				rd.include(request, response);
+			}
 		}
-
 	}
-
 }

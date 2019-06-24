@@ -19,4 +19,22 @@ public class Flight_Details {
 		}
 
 	}
+
+	public boolean update(String flight_id, String flight_Name, int fareArr[]) {
+		Flight_DAO update = new Flight_DAO();
+		int status = update.updateFlight(flight_Name, flight_id, fareArr);
+		if (status == 1)
+			return true;
+		else
+			return false;
+	}
+
+	public boolean delete(String flight_id) {
+		Flight_DAO delete = new Flight_DAO();
+		int status = delete.deleteFlight(flight_id);
+		if (status == 1)
+			return true;
+		else
+			return false;
+	}
 }

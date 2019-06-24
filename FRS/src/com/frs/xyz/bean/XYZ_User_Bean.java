@@ -7,6 +7,78 @@ public class XYZ_User_Bean {
 	String email;
 	String password;
 	String phoneNumber;
+	String userid;
+	String DateOfBirth;
+	String gender;
+	String street;
+	String district;
+	String city;
+	String state;
+	String pincode;
+
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+
+	public String getDateOfBirth() {
+		return DateOfBirth;
+	}
+
+	public void setDateOfBirth(String dob) {
+		DateOfBirth = dob;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getPincode() {
+		return pincode;
+	}
+
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
+	}
 
 	public String getUser_First_Name() {
 		return user_First_Name;

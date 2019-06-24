@@ -9,9 +9,37 @@ public class XYZ_Flight_Bean {
 	String arr_Time;
 	String dept_Time;
 	String flight_class;
+	String flightid;
+	String days[];
+	int fare;
+
+	public int getFare() {
+		return fare;
+	}
+
+	public void setFare(int fare) {
+		this.fare = fare;
+	}
+
+	public String[] getDays() {
+		return days;
+	}
+
+	public void setDays(String[] days) {
+		this.days = days;
+	}
+
 	int economy_fare;
 	int business_fare;
 	int firstclass_fare;
+
+	public String getFlightid() {
+		return flightid;
+	}
+
+	public void setFlightid(String flightid) {
+		this.flightid = flightid;
+	}
 
 	public String getFlight_Name() {
 		return flight_Name;

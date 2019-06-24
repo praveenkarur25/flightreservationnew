@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    	 <jsp:include page="AdminPage.jsp"/>
+    
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -20,75 +22,21 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Numans');
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster');
-.body{
-	font-family: 'Numans', sans-serif;
-	font-size:16px;
-	}
-	p{
-	color:black;
-	font-size:1em;
-	}
-.navbar-brand  span{
-	color: #FFC312;
-	font-size:25px;font-weight:700;letter-spacing:0.1em;
-    font-family: 'Numans', sans-serif;
-}
-.navbar-brand {
-	color: #fff;
-	font-size:25px;
-    font-family: 'Numans', sans-serif;
-	font-weight:700;
-	letter-spacing:0.1em;
-}
-.navbar-nav .nav-item .nav-link{
-	padding: 1.1em 1em!important;
-	font-size: 120%;
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: #fff;
-   font-family: 'Numans', sans-serif;
-}
-.navbar-nav .nav-item .nav-link:hover{color:#FFC312;}
-.navbar-expand-md .navbar-nav .dropdown-menu{
-	border-top:3px solid #fed136;
-}
-.dropdown-item:hover{background-color:#FFC312;color:#fff;}
-nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
-    -moz-transition: padding-top .3s,padding-bottom .3s;
-    transition: padding-top .3s,padding-bottom .3s;
-    border: none;
-	}
-	
- .shrink {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: #212529;
-}
-.text-intro{
-	width:90%;
-	margin:auto;
-	text-align:center;
-	padding-top:610px;
-}
-html,body{
-background-image: url('https://static.toiimg.com/thumb/65576160/Airplane.jpg?width=748&height=499');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
-}
+
 .container{
 height: 30%;
 align-content: center;
 }
 .card{
-height: 360px;
+height: 550px;
 margin-left:200px; 
-margin-top: 0px;
-margin-bottom: auto;
+margin-top: 100px;
 width: 700px;
 background-color: rgba(0,0,0,0.5) !important;
 overflow-y:auto;
+}
+.card-body{
+font-size: 18px;
 }
 .card-title h1{
 color: white;
@@ -99,62 +47,6 @@ padding:20px 10px 0px 30px;
 color: white;
 text-align: center;
 }
-.input-group-prepend span{
-width: 50px;
-background-color: #FFC312;
-color: black;
-border:0 !important;
-}
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
-}
-.login_btn{
-color: black;
-background-color: #FFC312;
-width: 100px;
-}
-.login_btn:hover{
-color: black;
-background-color: white;
-}
-.links{
-color: white;
-}
-.links a{
-margin-left: 6px;
-color:#FFC312;
-}
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #003973;
-  overflow-x: auto;
-  overflow-y:auto;
-  padding-top: 20px;
-}
-.sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  display: block;
-}
-.sidenav a:hover {
-  color: #ffc312;
-}
-.sidenav a:active {
-	background-color:#ffc312;
-	color: black;
-}
-.sidenav a:focus {
-	background-color:#ffc312;
-	color: black;
-}
 .table{
 	background-color: rgba(0,0,0,0.5) !important;
 	color:white !important;
@@ -164,6 +56,12 @@ color:#FFC312;
 }
 .btn:active{
 	background:black;
+}
+.text-intro {
+	width: 90%;
+	margin: auto;
+	padding-left:400px;
+	padding-top: 610px;
 }
 .btn:focus{
 	background:black;
@@ -180,39 +78,12 @@ form{
 }
 </style>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
-	<div class="container">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#"><span>ABC</span> FLIGHT SERVICES</a>
 
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      
-       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:9080/FRS/Login.jsp" id="logout" onClick="return confirmed()">Logout</a>
-      </li>
-    </ul>
-  </div>
-	</div>
-</nav>
-
-
-<section id="about">
-<div class="container">
-	
-</div>
-</section>
 	<div class="sidenav tab mt-5 pt-5">
-	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4 highlight">FLIGHTS</a>
-	    <a href="#" class="pt-4">ROUTE</a>
-	    <a href="#" class="pt-4">SCHEDULE</a>
-	    <a href="#" class="pt-4">PASSENGER DETAILS</a>
+	    <a href="http://localhost:9080/FRS/Flights.jsp" class="pt-4 highlight"><i class="fas fa-plane-departure">      FLIGHTS</i></a>
+	    <a href="http://localhost:9080/FRS/Route.jsp" class="pt-4"><i class="fas fa-map-marked-alt">    ROUTE</i></a>
+	    <a href="http://localhost:9080/FRS/Schedule.jsp" class="pt-4"><i class="fas fa-clock">    SCHEDULE</i></a>
+	    <a href="http://localhost:9080/FRS/Passenger_Details.jsp" class="pt-4"><i class="fas fa-users">  PASSENGER DETAILS</i></a>
 	</div>
 <div class="container">
 	<div class="d-flex justify-content-center h-100">
@@ -226,27 +97,40 @@ form{
 			<div class="card-body">
 				<form action="addflight" method="post">
 					<div class="form-group">
-						Flight name : <input type="text" style="width:170px" id="flightName" name="flightName" placeholder="Flight name" required>
+						Flight name &emsp;&emsp;: <input type="text" style="width:170px" id="flightName" name="flightName" placeholder="Flight name" required>
+						
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	From : <input type="text" style="width:150px" name="from" placeholder="From Airport" required>
-				    	Via : <input type="text" style="width:150px" name="via" placeholder="Inbetween" >
-				    	To : <input type="text" style="width:150px" name="to" placeholder="To Airport" required>
+				    	From &emsp;&emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:170px" name="from" placeholder="From Airport" required>
+				    	
+				    	&emsp;To &emsp;&emsp;&emsp;&emsp;: <input type="text" style="width:170px" name="to" placeholder="To Airport" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	Arrival time : <input type="text" style="width:150px" name="arrTime" placeholder="hh:mm" required>
-				    	Departure time : <input type="text" style="width:150px" name="depTime" placeholder="hh:mm" required>
+				    	
+				    	Departure time&emsp;: <input type="text" style="width:170px" name="depTime" placeholder="hh:mm" required>
+				    	&emsp;Arrival time : <input type="text" style="width:170px" name="arrTime" placeholder="hh:mm" required>
 				    </div>
 				    <br>
 				    <div class="form-group">
-				    	Class : <input type="text" style="width:150px" name="class" value="Economy" readonly>
+				    	Class &emsp;&emsp;&emsp;&emsp;&emsp; :<input type="text" style="width:170px; margin-left:4px;" name="class" value="Economy" readonly>
 				    </div>
 				    <br>
     				<div class="form-group">
-				      <label for="fare">Fare &#8377</label>
-				      <input type="number" style="width:150px" id="fare" name="fare" placeholder="500" required>
+				      <label for="fare">Fare &emsp;&emsp;&emsp;&emsp;&emsp;&#8377</label>
+				      <input type="number" style="width:170px" id="fare" name="fare" placeholder="500" required>
+    				</div>
+    				
+    				<div class="form-group">
+				      <label for="fare">Availabe Days &emsp;:</label>
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Mon" checked>Mon
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Tue">Tue
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Wed">Wed
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Thu">Thu
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Fri">Fri
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Sat">Sat
+				      <input type="checkbox" id="days" style="width:20px;height:15px;" name="days" value="Sun">Sun
     				</div>
 				
     				<div class="d-flex justify-content-center">
@@ -262,14 +146,15 @@ form{
 				</form>
 				</div>
 			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					
-				</div>
-			</div>
+			
 		</div>
 	</div>
-</div>
+<div class="container">
+			<div class="text-intro">
+
+				<p>Copyright &#x00A9 2019-Wipro Technologies. All rights reserved </p>
+			</div>
+		</div>
 </body>
 <script>
 $(document).on("scroll", function(){

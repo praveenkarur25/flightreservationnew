@@ -1,19 +1,20 @@
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -129,7 +130,9 @@ html, body {
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 		<div class="container">
 			<!-- Brand -->
-			<a class="navbar-brand" href="#"><span>XYZ</span> FLIGHT SERVICES</a>
+			<a class="navbar-brand" style="color:white;"><i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES <i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i></a>
 
 			<!-- Toggler/collapsibe Button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -141,8 +144,7 @@ html, body {
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item"><a class="nav-link"
-						href="http://localhost:9080/FRS/Login.jsp">Home</a>
-					</li>
+						href="http://localhost:9080/FRS/Login.jsp">Home</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbardrop"
 						data-toggle="dropdown"> Helpline </a>
@@ -157,31 +159,30 @@ html, body {
 
 	<div class="card-header">
 		<p>
-			About us<br>
-			<br> XYZ Flight services India Limited is plying flights in four
-			states namely Tamil Nadu, Pondy, Kerala, and Karnataka. Lakhs of
-			customer prefer XYZ Flight services flights through out the year for
-			going to various places in South India. 38 years in public transport
-			is indeed a great accomplishment by our company. Headquarters at
-			Salem, XYZ Flight services India Limited, is in business since last
-			four decades. From a humble beginning, it has grown to become one of
-			the leading flight operators with an expanding fleet of flights in
-			the country. Offering excellent service with its well-maintained
-			classes and courteous staff, XYZ Flight services strength lies in its
-			enlightened management under Er.R.SRINIVASAN its Managing Director.
-			Today the luxury flights of XYZ are familiar sights on almost all the
-			vast airways of the South. The runaway success of the company and the
-			popularity of its flight service is traceable to its quality and
-			timely service to customers, excellent labour relations and the
-			steadfast loyalty of the workers to the management. Born in the year
-			1949 at village called at Thiruchengode in Namakkal district.
-			Er.R.SRINIVASAN is simple and most unassuming, and he is from an
-			agricultural family.<br>ER.SRINIVASAN started his career as a
-			tour operator in 1968, Later, in 1971, he realized the need for
-			regular flight services between major cities. Thus was born XYZ
-			flight services in 1972. At the age of 23, he started the first
-			service of XYZ Flights between Chennai and Bangalore. Initially he
-			used to travel and sometimes even drove the flight himself. His
+			About us<br> <br> XYZ Flight services India Limited is
+			plying flights in four states namely Tamil Nadu, Pondy, Kerala, and
+			Karnataka. Lakhs of customer prefer XYZ Flight services flights
+			through out the year for going to various places in South India. 38
+			years in public transport is indeed a great accomplishment by our
+			company. Headquarters at Salem, XYZ Flight services India Limited, is
+			in business since last four decades. From a humble beginning, it has
+			grown to become one of the leading flight operators with an expanding
+			fleet of flights in the country. Offering excellent service with its
+			well-maintained classes and courteous staff, XYZ Flight services
+			strength lies in its enlightened management under Er.R.SRINIVASAN its
+			Managing Director. Today the luxury flights of XYZ are familiar
+			sights on almost all the vast airways of the South. The runaway
+			success of the company and the popularity of its flight service is
+			traceable to its quality and timely service to customers, excellent
+			labour relations and the steadfast loyalty of the workers to the
+			management. Born in the year 1949 at village called at Thiruchengode
+			in Namakkal district. Er.R.SRINIVASAN is simple and most unassuming,
+			and he is from an agricultural family.<br>ER.SRINIVASAN started
+			his career as a tour operator in 1968, Later, in 1971, he realized
+			the need for regular flight services between major cities. Thus was
+			born XYZ flight services in 1972. At the age of 23, he started the
+			first service of XYZ Flights between Chennai and Bangalore. Initially
+			he used to travel and sometimes even drove the flight himself. His
 			regular travel on the flights gave him an opportunity to interact
 			with all his customers and get valuable feedback, which helped
 			improve service, facilities and comfort levels in the bus. In the
@@ -202,7 +203,7 @@ html, body {
 		<div class="container">
 			<div class="text-intro">
 
-				<p>&#x00A9 2019-All rights reserved Air-India services</p>
+				<p>Copyright &#x00A9 2019-Wipro Technologies. All rights reserved</p>
 			</div>
 		</div>
 	</section>

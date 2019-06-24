@@ -1,7 +1,4 @@
 
-
-
-
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -124,7 +121,7 @@ html, body {
 }
 
 .card {
-	height: 310px;
+	height: 330px;
 	margin-top: auto;
 	margin-bottom: auto;
 	width: 400px;
@@ -179,9 +176,9 @@ input:focus {
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
 		<div class="container">
 			<!-- Brand -->
-			<a class="navbar-brand" href="#"><i class="fas fa-plane"
-				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES<i
-				class="fas fa-plane" style="font-size: 25px; color: #ffc312;"></i></a>
+			<a class="navbar-brand" style="color:white;"><i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i>XYZ FLIGHT SERVICES <i class="fas fa-plane"
+				style="font-size: 25px; color: #ffc312;"></i></a>
 
 			<!-- Toggler/collapsibe Button -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -213,7 +210,7 @@ input:focus {
 		<div class="container">
 			<div class="text-intro">
 
-				<p>&#x00A9 2019-All rights reserved Air-India services</p>
+				<p>Copyright &#x00A9 2019-Wipro Technologies. All rights reserved </p>
 			</div>
 		</div>
 	</section>
@@ -229,13 +226,14 @@ input:focus {
 				</div>
 
 				<div class="card-body">
-					<form action="LoginServlet" method="post">
+					<form action="login" method="post">
+					<div style="color:#ff0000;" >${exist}</div>
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" name="userName" class="form-control"
-								placeholder="username or mail id" required>
+							<input type="text" name="userid" class="form-control"
+								placeholder="userid" required>
 
 						</div>
 						<div class="input-group form-group">
@@ -243,7 +241,10 @@ input:focus {
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
 							<input type="password" name="password" class="form-control"
-								placeholder="password" required>
+								placeholder="password" id="password-field" required>
+								<div class="form-control col-sm-2">
+								<span toggle="#password-field" class="fas fa-fw fa-eye field-icon toggle-password"></span>
+								</div>
 						</div>
 						<div class="form-group">
 							<input type="submit" onClick="return Validation()" value="Login"
@@ -261,6 +262,18 @@ input:focus {
 		</div>
 	</div>
 </body>
+<script>
+$(".toggle-password").click(function(){
+	
+	$(this).toggleClass("fa-eye fa-eye-slash");
+	var input = $($(this).attr("toggle"));
+	if(input.attr("type")=="password"){
+		input.attr("type","text");
+	}else{
+		input.attr("type","password");
+	}
+});
+</script>
 <script>
 	$(document).on("scroll", function() {
 		if ($(document).scrollTop() > 86) {
