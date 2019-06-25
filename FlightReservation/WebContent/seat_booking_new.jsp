@@ -299,12 +299,13 @@ background:blue;
 </section>
  <div class="container">
 	<div class="h-100">
+	<form>
 		<div class="row">
 			<div class="column1">
 				<div class="card">
 					<div class="card-body">
 						<h2 class="card-title text-white text-start">Seat Layout</h2><br><br>
-					<form class="text-center" name="check">
+					<!-- <form class="text-center" name="check"> -->
 				 	<div class="input-group form-group  d-flex justify-content-center seatClass">
 								<h6 class="text-white ml-3 mb-0">Economy Class</h6><br><br>
 				    <div class="wrapper">
@@ -337,11 +338,11 @@ background:blue;
 				        </ol>
 			          <ol class="seats" type="A">
 				        <li class="seat">
-				          <input type="checkbox" id="B1" />
+				          <input type="checkbox" id="B1" disabled />
 				          <label for="B1">01</label>
 				        </li>
 				        <li class="seat">
-				          <input type="checkbox" id="B2" />
+				          <input type="checkbox" id="B2" disabled/>
 				          <label for="B2">02</label>
 				        </li>
 				        <li class="seat">
@@ -441,17 +442,17 @@ background:blue;
 				        </li>E
 				       </ol>
 				    </div> 
-			</div>
+					</div>
 					<div class="row">
 						<div class="col-5">
 							<span class="total-score text-white" id="count"><h6 class="mt-2">Seat : <span class="number">0</span></span></h6>
  						</div>
  	
  						<div class="col-3">
-							<input type="submit" onclick="return validation()" class="btn btn-primary btn-sm-2 ml-4 verify " value="done">
+							<input type="button" onclick="return validation()" class="btn btn-primary btn-sm-2 ml-4 verify " value="done">
  						</div>
  					</div>		
- 				</form>
+ 				<!-- </form> -->
 			</div>
 		</div>
 	</div>
@@ -459,7 +460,7 @@ background:blue;
 				<div class="card text-white">
 					<div class="card-body">
 						<h5 class="card-title text-center">Passenger Details</h5><br>
-						<form>
+						<!-- <form> -->
 							<div class="row">
 								<div class="col">
 									<label for="from">From:</label>
@@ -558,11 +559,12 @@ background:blue;
 								<div class="text-center">
 									<input class="btn btn-primary" onClick="return valid()" style="align:center;" type="submit" value="submit">
 								</div>
-						</form>
+						<!-- form</form> -->
 					</div>
 				</div>	
 			</div>
 		</div>
+		</form>
 	</div>
 	</div>
 </body>
@@ -594,7 +596,7 @@ $(document).on("scroll", function(){
 		var count=0;
 		var prev_numall = 0;
 		var numberAll=0;
-		const chex = document.querySelectorAll('input[type="checkbox"]');
+		const chex = document.querySelectorAll('input[type="checkbox"]:not([disabled])');
 		const total = document.querySelector('.total-score .number')
 		document.querySelector('.wrapper').addEventListener('change', function(event) {
 		numberAll = this.querySelectorAll('input[type="checkbox"]:checked').length
@@ -602,10 +604,27 @@ $(document).on("scroll", function(){
 			count=0;
 			prev_numall = numberAll;
 		}
-		
 		total.innerHTML = numberAll
-		
-		
+		if(numberAll >= 4){
+			for(var i=0;i<chex.length;i++)
+				{
+				if(!chex[i].checked)
+					{
+					chex[i].disabled= true;
+					}
+				
+				}
+			
+		}else{
+			for(var i=0;i<chex.length;i++)
+			{
+			if(!chex[i].checked)
+				{
+				chex[i].disabled= false;
+				}
+			
+			}
+		}
 		
 		const list = event.target.closest('.list')
 		const numberList = list.querySelectorAll('input[type="checkbox"]:checked').length
